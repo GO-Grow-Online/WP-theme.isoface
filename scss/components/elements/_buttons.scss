@@ -1,0 +1,207 @@
+// Buttons
+.btn {
+
+    position: relative;
+    display: inline-block;
+    padding: 0.75rem 1.75rem;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    font-weight: 900;
+
+    filter: drop-shadow(10px 0 30px #00000027);
+    transition: $fast $bezier;
+
+
+    $corner : 1.5rem;
+
+    &::before, &::after {
+        content: "";
+        position: absolute;
+
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        clip-path: polygon($corner 0%, 100% 0%, 100% 100%, 0 100%, 0 $corner);
+
+        transition: $fast $bezier;
+    }
+
+    &::before {
+        z-index: -5;
+    }
+    &::after {
+        width: 0%;
+        z-index: -2;
+    }
+
+    &.btn-red {
+        color: $white;
+        &:hover { color: $red; }
+        &::before { background: linear-gradient(to left, $red, darken($red, 10%)); }
+        &::after { background: $white; }
+    }
+
+    &.btn-white {
+        color: $red;
+        &:hover { color: $white; }
+        &::before { background: $white; }
+        &::after { background: linear-gradient(to left, $red, darken($red, 10%)); }
+    }
+
+
+    &:hover {
+        &::before {
+            clip-path: polygon(100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%);
+        }
+        
+        &::after {
+            clip-path: polygon($corner 0%, 100% 1%, 100% 100%, 0 100%, 0 $corner);
+            width: 100%;
+        }
+    }
+    
+    &-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        margin-top: 2.5rem;        
+    }
+
+    &-square {
+        width: 3rem;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &-lg {
+        display: flex;
+        align-items: stretch;
+        padding: 0;
+        width: 100%;
+        filter: none;
+        
+        &-label {
+            background-color: $white;
+            padding: map-get($sec-spacings, mobile-x);
+            width: calc(100% - 3rem);
+        }
+
+        &-icon {
+            z-index: 1;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 4.75rem;
+
+            color: $white;
+
+            border-left: 1px solid $white;
+
+            transition: all $fast $bezier;
+
+            svg, svg path { stroke: $white!important; transition: all $fast $bezier; }
+
+            svg {
+                width: 1.5rem;
+                height: 1.5rem;
+
+                transition: all $fast $bezier;
+            }
+
+            &::before, &::after {
+                content: "";
+                position: absolute;
+        
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+
+                transition: $fast $bezier;
+            }
+        
+            &::before {
+                z-index: -5;
+                background-color: $red;
+            }
+            &::after {
+                width: 0%;
+                background-color: $white;
+                z-index: -2;
+            }
+        }
+
+        &:hover .btn-lg {
+            &-icon {
+                border-left: 1px solid $inactive-color;
+                color: $red;
+                svg, svg path { stroke: $red!important; }
+                &::after{
+                    width: 100%;
+                } 
+            }
+        }
+
+        &--reverse  {
+
+            flex-direction: row-reverse;
+
+            .btn-lg {
+                &-icon {
+                    border-right: 1px solid $white;
+                }
+
+            }
+            
+            &:hover{
+                .btn-lg-icon {
+                    border-right: 1px solid $inactive-color;
+                }
+            }
+        }
+
+        &--small {
+            width: auto;
+            box-shadow: 0 10px 30px -10px #0000003f;
+
+            .btn-lg {
+                &-icon {
+                    width: 3.5rem;
+                }
+                        
+                &-label {
+                    padding: (map-get($sec-spacings, mobile-x) * 0.6) map-get($sec-spacings, mobile-x);
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width :  map-get($breakpoints, md)) {
+
+}
+
+
+@media (min-width :  map-get($breakpoints, lg)) {
+    .btn {
+        font-size: 1.1rem;
+        &:not(.btn-lg) {
+            padding: 1.05rem 2.25rem;
+        }
+
+        &-lg {
+            width: auto;
+            &-label {
+                width: auto;
+                padding: 1.5rem 2.5rem;
+            }
+        }
+    }
+}

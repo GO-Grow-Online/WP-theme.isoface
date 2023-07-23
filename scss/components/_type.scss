@@ -1,0 +1,88 @@
+//////////
+// TYPE //
+//////////
+
+body {
+    font-size: 14px;
+    line-height: 1.7;
+    font-family: $font1;
+    color: $text-color;
+}
+
+h1, .h1, h2, .h2, h3, .h3 {
+    line-height: 1.25;
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+h1, .h1 {
+    font-size: 2.52rem;
+}
+
+h2, .h2 {
+    font-size: 1.48rem;
+}
+
+h1, .h1, h2, .h2, h3, .h3 {
+    & > span {
+        font-size: 0.9rem;
+        line-height: 1.35;
+        margin-left: 2px;
+        font-weight: 900;
+        color: $red;
+        display: block;
+        text-transform: uppercase;
+    }
+}
+
+h3, .h3 {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+@media (min-width: map-get($breakpoints, md)) {
+    body {
+        font-size: 15px;
+    }
+
+    h1, .h1 {
+        font-size: 5rem;
+    }
+    
+    .red-line {
+        position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 2.5rem;
+            right: calc(100% + $card-desktop-spacing);
+            height: $card-desktop-spacing;
+            width: 50vw;
+
+            background: $red-gradient;
+        }   
+    }
+    
+    h2, .h2 {
+        font-size: 3.1rem;
+    }
+
+    h1, .h1, h2, .h2 {
+        & > span {
+            font-size: 1.05rem;
+        }
+    }
+    
+    h3, .h3 {
+        font-weight: 800;
+        text-transform: none;
+        font-size: 1.7rem;
+    }
+}

@@ -1,0 +1,30 @@
+// main.scss
+@import 'utils/_variables';  
+ 
+@import 'utils/_mixins';   
+@import 'components/_type';   
+@import 'components/_header'; 
+@import 'utils/_reset';  
+
+@import 'api/_slick'; 
+@import 'api/_lightbox'; 
+
+@import 'components/elements/_cards'; 
+@import 'components/elements/_collapses'; 
+@import 'components/elements/_buttons'; 
+@import 'components/elements/_slick'; 
+@import 'components/elements/_wp-form'; 
+
+@import 'components/_animation'; 
+@import 'components/_footer';  
+@import 'components/_heading';  
+@import 'components/_sections';
+@import 'components/_general';
+@import 'components/_responsiv'; 
+
+@import 'pages/_front-page'; 
+@import 'pages/_about'; 
+@import 'pages/_contact'; 
+@import 'pages/_single-product'; 
+@import 'pages/_single-projet'; 
+@import 'pages/_product-type'; 

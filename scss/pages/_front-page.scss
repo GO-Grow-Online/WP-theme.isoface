@@ -1,0 +1,101 @@
+section.heading-fp {
+
+    & > .wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .heading-fp {
+        &-text {
+            padding: map-get($sec-spacings, mobile-x);
+            padding-bottom: map-get($sec-spacings, mobile-y);
+        }
+        
+        &-slider {
+
+            &::after {
+                content: "";
+                height: $white-corner-size-mobile;
+                width: $white-corner-size-mobile;
+                position: absolute;
+                top: -1px;
+                left: 0;
+                background-color: $white;
+                clip-path: polygon(0 0, 0% 100%, 100% 0);
+                pointer-events: none;
+                z-index: 1;
+            }
+
+            .slide-img {
+                height: $fp-slider-image-height!important;
+                position: relative;
+                max-height: 650px;
+
+                img {
+                    height: 100%;
+                }
+            }
+
+            .slick-dots {
+                top: calc($fp-slider-image-height - 1rem - map-get($sec-spacings, mobile-x));
+            }
+
+        }
+    }
+}
+
+
+
+@media (min-width: map-get($breakpoints, lg)) {
+    section.heading-fp {
+
+        & > .wrapper {
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            & > div {
+                width: 50vw;
+            }
+        }
+
+        .heading-fp {
+            &-text {
+                order: 0;
+                padding-right: (map-get($sec-spacings, desktop-y) * 0.5);
+                padding-left: map-get($sec-spacings, desktop-x);
+                padding-top: map-get($sec-spacings, desktop-y);
+                padding-bottom: map-get($sec-spacings, desktop-y);
+            }
+            
+            &-slider {
+                height: auto;
+                order: 1;
+
+                .slick {
+                    &-slide {
+                        position: relative;
+                    }
+
+                    &-dots {
+                        top: inherit;
+                        bottom: $card-desktop-spacing + 5rem;
+                        left: $card-desktop-spacing;
+                    }
+                }
+
+                .btn-lg {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                }
+
+                &::after {
+                    width: $white-corner-size-desktop;
+                    height: $white-corner-size-desktop;
+                }
+            }
+        }
+    }
+}

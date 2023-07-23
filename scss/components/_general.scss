@@ -1,0 +1,262 @@
+* {
+    box-sizing: border-box;
+}
+
+::-moz-selection {
+    background-color: $red;
+    color: $white;
+}
+
+::selection {
+    background-color: $red;
+    color: $white;
+}
+
+::-webkit-selection {
+    background-color: $red;
+    color: $white;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: $white;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: darken($inactive-color, 10%);
+    transition: background-color $fast $bezier;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: $red;
+}
+
+::-webkit-scrollbar-button {
+    background-color: darken($inactive-color, 20%);
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+    &.contain {
+        object-fit: contain;
+    }
+}
+
+main {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: $header-height-mobile;
+}
+
+.link-icon {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: $red;
+    font-weight: 700;
+    
+    svg {
+        width: $icon-size-mobile;
+        height: $icon-size-mobile;
+        margin-bottom: -0.35rem;
+        margin-right: 0.5rem;
+    }
+}
+
+
+.img_gradient {
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    &-left::after {
+        background: linear-gradient(to top right, #00000060 0%, #00000000 60%);
+    }
+
+    &-right::after {
+        background: linear-gradient(to top left, #00000060 0%, #00000000 60%);
+    }
+}
+
+$sp : map-get($sec-spacings, mobile-x);
+.list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin-left: calc($sp * -1);
+    margin-top: calc($sp * -1);
+    margin-bottom: calc($sp * -1);
+    width: calc(100% + ($sp * 2));
+
+    &--3col {
+        & > li, & > div:not(.slick-list) {
+            margin: $sp;
+            width: calc(100% - ($sp * 2));
+        }
+    }
+}
+
+
+.social-links {
+
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-top: 1.5rem;
+    margin-left: -0.25rem;
+
+    &-item {
+        a {
+            display: block;
+            padding: 0.5rem;
+            color: $red;
+            transition: opacity $fast $bezier;
+            
+            svg {
+                width: 2rem;
+                height: 2rem;
+            }
+
+            &:hover {
+                opacity: .3;
+            }
+        }
+    }
+}
+
+// Section backgrounds
+section {
+    &.bg {
+        position: relative;
+        &-pretty {
+            background-image: linear-gradient(to bottom, #00000009 0%, #00000000 30%, #00000000 70%, #00000009 100%);
+    
+            &::after, &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                pointer-events: none;
+            }
+    
+            &::before {
+                // content: none;
+                background-image: radial-gradient(circle at 50%, #ffffffe1 0%, #ffffffe1 45%, #ffffff00 100%);
+                z-index: -4;
+            }
+    
+            &::after {
+                background-image: url('static/svg/bg.svg');
+
+                background-size: 100px;
+                z-index: -5;
+            }
+        }
+    
+    
+        &-gradient-top {
+            background: linear-gradient(to bottom, #00000009 0%, #00000000 20%);
+        }
+    
+        &-gradient-bottom {
+            background: linear-gradient(to top, #00000009 0%, #00000000 20%);
+        }
+    }
+
+    .centered_btn {
+        margin-top: 3rem;
+        margin-left: calc(map-get($sec-spacings, mobile-x) * -1);
+        width: calc(100% + (map-get($sec-spacings, mobile-x) * 2));
+        display: grid;
+        gap: $card-mobile-spacing;
+        align-items: center;
+        grid-template-columns: auto max-content auto;
+
+        & > span {
+            background-color: $red;
+            display: block;
+            width: 100%;
+            height: $card-mobile-spacing;
+        }
+    }
+}
+
+
+@media (min-width :  map-get($breakpoints, md)) {
+    .list, .list-md {
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+
+        &--3col {
+            & > li, & > div {
+                // width: calc(50% - (map-get($sec-spacings, mobile-x) * 2));
+            }
+        }
+
+
+        .card, .card-body {
+            height: 100%;
+        }
+    }
+
+    section.bg-pretty::after {
+        background-size: 200px;
+    }
+}
+
+
+@media (min-width :  map-get($breakpoints, lg)) {
+
+    section {
+        .centered_btn {
+            width: 100%;
+            margin-left: 0;
+            margin-top: 0;
+        }
+    }
+
+    main {
+        padding-top: $header-height-desktop;
+    }
+
+    $sp : calc($card-desktop-spacing / 2);
+    .list, .list-md, .list-lg {
+        display: flex;
+        justify-content: center;
+
+        // padding-bottom: 0;
+
+        margin-left: calc($sp * -1);
+        margin-top: calc($sp * -1);
+        margin-bottom: calc($sp * -1);
+        width: calc(100% + ($sp * 2));
+
+        &.list--3col {
+            & > li, & > div {
+                margin: $sp;
+                width: calc(33.33% - ($sp * 2));
+            }
+        }
+
+        .card, .card-body {
+            height: 100%;
+        }
+    }
+}

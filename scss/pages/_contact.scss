@@ -1,0 +1,8 @@
+
+@media (min-width: map-get($breakpoints, lg)) {
+    body.page-template-page-contact {
+        section.section_contact {
+            padding-top: map-get($sec-spacings, desktop-y);
+        }
+    }
+}

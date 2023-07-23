@@ -1,0 +1,31 @@
+body.single-projet {
+    section.section_produitContent {
+        & > .wrapper {
+            overflow: visible;
+            padding-top: map-get($sec-spacings, mobile-y)!important;
+            padding-bottom: map-get($sec-spacings, mobile-y)!important;
+        }
+    }
+}
+
+
+
+
+
+@media (min-width :  map-get($breakpoints, lg)) {
+    body.single-projet {
+        section.section_produitContent {
+            & > .wrapper {
+                padding-top: map-get($sec-spacings, desktop-y)!important;
+                padding-bottom: map-get($sec-spacings, desktop-y)!important;
+            }
+
+            .section_produitContent-pictures {
+                margin-top: 0;
+            }
+            .section_produitContent-description {
+                padding-top: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,113 @@
+footer {
+    
+    margin-bottom: 4rem;
+
+    & > .wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+        gap: map-get($sec-spacings, mobile-y);
+        
+        align-items: flex-start!important;
+        justify-content: flex-start!important;
+
+        .footer-logo svg {
+            width: 80%;
+            max-width: 300px;
+        }
+
+        .link-list {
+
+            .link-list-item {
+
+                a {
+
+                    display: flex;
+                    padding: 0.25rem 0;
+                    font-weight: 600;
+
+                    transition: color $fast $bezier;
+
+                    svg{
+                        width: $icon-size-mobile;
+                        margin-top: 5px;
+                        margin-right: 0.75rem;
+
+                        transform: translateX(0);
+                        transition: transform $fast $bezier;
+                    }
+                    
+                    path {
+                        stroke: $red;
+                        margin-right: 0.75rem;
+                    }
+
+                    &:hover {
+                        color: $red;
+                        svg {
+                            transform: translateX(0.3rem);
+                        }
+                    }
+                }
+            }
+        }
+
+    }  
+    
+    & > .wrapper.footer-bottom {
+        background-color: $inactive-color;
+        padding-top: $card-mobile-spacing!important;
+        padding-bottom: $card-mobile-spacing!important;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between!important;
+        gap: 1.5rem;
+
+        p > a {
+            &::after {
+                content:  " - ";
+            }
+
+            &:last-child {
+                &::after {
+                    content: none;
+                }
+            }
+        }
+
+        a {
+            opacity: 1;
+            transition: opacity $fast $bezier;
+
+            &:hover {
+                opacity: .3;
+            }
+        }
+
+        * { margin: 0; }
+    }
+}
+
+@media (min-width: map-get($breakpoints, lg)) {
+    footer {
+        margin-bottom: 0;
+        & > .wrapper {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr;
+
+            .link-list {
+                &-item {
+                    a svg {
+                        width: $icon-size-desktop;
+                    }
+                }
+            }
+        }   
+
+        .footer-bottom {
+            padding-top: $card-desktop-spacing!important;
+            padding-bottom: $card-desktop-spacing!important;
+        }
+    }
+}
