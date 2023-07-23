@@ -1,0 +1,12 @@
+<div class="projects_slider">
+    {% for project in projects %}
+    <div class="projects_slider-item">
+        {% set img = project.meta('thumbnail') %}
+        <div class="projects_slider-item-img img_gradient img_gradient-left">
+            {% include 'blocks/image.twig' %}
+        </div>
+        {% set link = {'title': project.title, 'url': project.link} %}
+        {% include 'blocks/btn-lg.twig' %}
+    </div>
+    {% endfor %}
+</div>

@@ -1,0 +1,25 @@
+<a href="{{ item.link }}" class="card card--news">
+    <div class="card-header">
+        <div class="card-header-img">
+            {% set image_format = 'card-thumbnail' %}
+            {% set img = item.meta('thumbnail') %}
+            {% include 'blocks/image.twig' %}
+        </div>
+    </div>
+    <div class="card-body">
+        <p class="news-date">{{ item.date }}</p>
+        <h3>{{ item.title }}</h3>
+
+        {% if item.short_desc %}
+        <p class="news-desc">{{ item.short_desc }}</p>
+        {% endif %}
+
+        <span class="link-icon">
+            {% include "static/icons/info-square.svg" %}
+            En savoir plus
+        </span>
+    </div>
+</a>
+
+
+

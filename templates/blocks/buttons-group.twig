@@ -1,0 +1,13 @@
+{% set btn_red = block.btn_1 %}
+{% set btn_white = block.btn_2 %}
+
+{% if btn_red or btn_white %}
+<div class="btn-group">
+    {% if btn_red %}
+    <a href="{{ btn_red.url }}" target="{{ btn_red.target }}" class="btn btn-red">{{ btn_red.title }}</a>
+    {% endif %}
+    {% if btn_white %}
+    <a href="{{ btn_white.url }}" target="{{ btn_white.target }}" class="btn btn-white">{{ btn_white.title }}</a>
+    {% endif %}
+</div>
+{% endif %}

@@ -1,0 +1,37 @@
+{% extends "base.twig" %}
+
+
+{% block heading %}
+<!-- ARCHIVE HEADING -->
+<section class="heading">
+    {% set img = p.object_type != 'post' ? p.heading_img : p.meta('heading_img') %}
+    {% set is_fs = true %}
+    <span class="heading-bg">{% include 'blocks/image.twig' %}</span>
+
+    <div class="wrapper">
+        {% set title = p.heading_title is not empty ? p.heading_title : p.title %}
+
+        <h1>{{ title }}</h1>
+    </div>
+</section>
+
+{% endblock %}
+
+
+{% block content %}
+
+<section class="hidden-animate">
+    <div class="wrapper">
+        <ul class="list list--3col">
+            {% for item in archive %}
+            <li>
+                {% set template = post_type == 'produits' ? 'product-card' : 'news-card' %}
+                {% include 'blocks/' ~ template ~ '.twig' %}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
+
+
+{% endblock %}

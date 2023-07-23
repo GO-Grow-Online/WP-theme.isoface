@@ -1,0 +1,36 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+<!-- content repeater -->
+{% set switch = false %}
+{% set content_repeater = p.meta('rep') %}
+{% for section in content_repeater %}
+
+<section class="section_content{% if switch %} reverse{% endif %} {% if loop.first %}section_content--first{% endif %} hidden-animate">
+    <div class="wrapper">
+        <div class="section_content-text">
+            {% set block = section.content %}
+            {% include 'blocks/content-block.twig' %}
+        </div>
+        <div class="section_content-media">
+            {% set img = section.img %}
+            <div class="section_content-media-img img_gradient {% if switch %} img_gradient-left{% else %} img_gradient-right{% endif %}">
+                {% include 'blocks/image.twig' %}
+            </div>
+        </div>
+    </div>
+</section>
+
+{% set switch = not switch %}
+{% endfor %}
+
+{% set content_repeater = empty %}
+
+
+<!-- section news -->
+{% set section_classes = empty %}
+{% include 'sections/latest-news.twig' %}
+
+
+{% endblock %}

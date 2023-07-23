@@ -1,0 +1,18 @@
+<a href="{{ item.link }}" class="card card--product-type">
+    <div class="card-header">
+        <div class="card-header-img">
+            {% set image_format = "card-thumbnail" %}
+            {% set img = item.meta('thumbnail') %}
+            {% include 'blocks/image.twig' %}
+        </div>
+    </div>
+    <div class="card-body">
+        <div>
+            <h3>{{ item.name }}</h3>
+            {% if item.description %}
+            <p>{{ item.description }}</p>
+            {% endif %}
+        </div>
+        {% include 'static/icons/info-square.svg' %}
+    </div>
+</a>

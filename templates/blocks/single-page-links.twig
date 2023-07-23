@@ -1,0 +1,25 @@
+{% if links %}
+<div class="section_produitContent-description-services">
+
+    <h3>{{ links_title }}</h3>
+    <div class="btn-group">
+
+        {% for item in links %}
+
+            {% set url = links_icon is not empty ? item.link : '#contact' %}
+			{% set link = {'title': item.title, 'url': url } %}
+			{% set custom_attributes = "data-form='" ~ item.id ~ "'" %}
+            {% set custom_classes = 'btn-lg--small' %}
+            {% set custom_icon = links_icon is not empty ? links_icon : 'email' %}
+
+            {% include 'blocks/btn-lg.twig' %}
+
+        {% endfor %}
+    </div>
+</div>
+
+{% set links_title = empty %}
+{% set links_icon = empty %}
+{% set url = empty %}
+
+{% endif %}

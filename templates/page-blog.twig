@@ -1,0 +1,19 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+
+<section>
+    <div class="wrapper">
+        <ul class="list list--3col">
+            {% for item in archive %}
+            <li>
+                {% include 'blocks/news-card.twig' %}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
+
+
+{% endblock %}

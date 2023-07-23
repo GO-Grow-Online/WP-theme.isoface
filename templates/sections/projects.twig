@@ -1,0 +1,18 @@
+{% if projects %}
+<section class="section_projects {{ section_classes }} hidden-animate">
+    <div class="wrapper">
+        <div class="section_projects-text">
+            {% set block = p.type != "page" ? g['projet_' ~ p.type]['content'] : p.meta('projects_content') %}
+            {% set block = block_slug != '' ? p.meta(block_slug).content : block %}
+            {% include 'blocks/content-block.twig' %}
+        </div>
+
+        <div class="section_projects-slider">
+            {% include 'blocks/projects-slider.twig' %}
+        </div>
+    </div>
+</section>
+{% endif %}
+{% set switch_section_projects = false %}
+{% set section_classes = empty %}
+{% set block_slug = empty %}

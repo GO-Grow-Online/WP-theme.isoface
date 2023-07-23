@@ -1,0 +1,25 @@
+{% for section in content_repeater %}
+
+<section class="section_content{% if switch %} reverse{% endif %} {% if loop.first %}section_content--first{% endif %} hidden-animate">
+    <div class="wrapper">
+        <div class="section_content-text">
+            {% set block = section.about_content %}
+            {% include 'blocks/content-block.twig' %}
+        </div>
+        <div class="section_content-media">
+            {% set img = section.img %}
+            {% set link = section.link %}
+
+            <div class="section_content-media-img img_gradient {% if switch %} img_gradient-left{% else %} img_gradient-right{% endif %}">
+                {% include 'blocks/image.twig' %}
+            </div>
+
+            {% include 'blocks/btn-lg.twig' %}
+        </div>
+    </div>
+</section>
+
+{% set switch = not switch %}
+{% endfor %}
+
+{% set content_repeater = empty %}

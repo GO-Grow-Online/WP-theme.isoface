@@ -1,0 +1,102 @@
+{% extends "base.twig" %}
+
+
+{% block heading %}{% endblock %}
+
+{% block content %}
+
+<section class="section_produitContent hidden-animate">
+	<div class="wrapper">
+
+		<div class="section_produitContent-content">
+			<div class="section_produitContent-description">
+
+				{% set block = p.meta('itr_content') %}
+				{% set st = block.st != "" ? block.st : "Réalisation"  %}
+				{% set t = block.t != "" ? block.t : p.title  %}
+
+				<h1 class="red-line">
+					{% if st is not empty %}<span>{{ st }}</span>{% endif %}
+					{% if t is not empty %}{{ t }}{% endif %}
+				</h1>
+
+				<div class="wysiwyg">{{ block.ctn }}</div>
+
+
+				{% set links = p.meta('services_rel') %}
+				{% set links_title = "Services liés" %}
+				{% include 'blocks/single-page-links.twig' %}
+				
+				{% set links = p.meta('products_rel') %}
+				{% set links_icon = "link" %}
+				{% set links_title = "Produits liés" %}
+				{% include 'blocks/single-page-links.twig' %}
+			</div>
+		</div>
+
+		<div class="section_produitContent-pictures">
+			<ul>
+				{% set img_num = p.gal_showcase %}
+				{% set gal = p.meta('gal') %}
+				{% for current_img in range(1, img_num) %}
+				{% set img = gal[current_img - 1] %}
+				<li>
+					{% set image_format = loop.first == true ? 'medium' : 'gal-showcase' %}
+
+					{% if loop.first %}
+						{% set custom_attributes = 'data-lightbox="Galerie"' %}
+						{% set link = {'title': 'Voir la gallerie photo', 'url': img.sizes.large } %}
+						{% set custom_icon = 'see-gallery' %}
+						{% include 'blocks/btn-lg.twig' %}
+
+						{% include "blocks/image.twig" %}
+					{% else %}
+						<a title="{{ img.title }}" href="{{ img.sizes.large }}" {{ custom_attributes }}>
+							{% include "blocks/image.twig" %}
+						</a>
+					{% endif %}
+				</li>
+
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+</section>
+
+
+
+
+{% set section_classes = "bg bg-pretty" %}
+{% set projects = other_projects %}
+{% include 'sections/projects.twig' %}
+
+
+
+{% if other_products %}
+<section class="section_productsTypes bg bg-pretty">
+    <div class="wrapper">
+        <h2>
+            <span>Découvrez nos</span>
+            Autres produits
+        </h2>
+
+        <ul class="list-md list--3col">
+            {% for item in other_products %}
+            <li>
+                {% include 'blocks/product-card.twig' %}
+            </li>
+            {% endfor %}
+        </ul>
+
+		<div class="centered_btn">
+            <span aria-hidden="true"></span>
+            <a class="btn btn-white" href="{{ products_link }}">Voir tous les produits</a>
+            <span aria-hidden="true"></span>
+        </div>
+    </div>
+</section>
+{% endif %}
+
+
+
+{% endblock %}

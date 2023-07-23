@@ -1,0 +1,17 @@
+{% if link.url is not empty %}
+<a href="{{ link.url }}" {{ custom_attributes }} target="{{ link.target }}" class="btn btn-lg {{ custom_classes }}">
+    <span class="btn-lg-label">{{ link.title }}</span>
+    
+    <div class="btn-lg-icon">
+        {% if custom_icon is empty %}
+            {% include 'static/icons/info-square.svg' %}
+        {% else %}
+            {% include 'static/icons/'~ custom_icon ~'.svg' %}
+        {% endif %}
+    </div>
+</a>
+{% endif %}
+
+{% set custom_icon = empty %}
+{% set custom_attributes = empty %}
+{% set custom_classes = empty %}

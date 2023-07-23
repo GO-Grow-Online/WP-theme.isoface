@@ -1,0 +1,35 @@
+{% if img is empty %}
+    {% set img = g.img_placeholder %}
+{% endif %}
+
+{% if img and image_format is empty %}
+
+<picture>
+    <source media="(max-width: 500px)"  type="image/jpg" srcset="{{ img.sizes.thumbnail }}">
+    <source media="(max-width: 900px)"  type="image/jpg" srcset="{{ img.sizes.medium }}">
+    {% if is_fs == true %}
+        <source media="(min-width: 900px)" type="image/jpg" srcset="{{ img.sizes.large }}">
+    {% endif %}
+    <img loading="lazy" alt="{{ img.alt }}" src="{{ img.sizes.medium }}">
+</picture>
+
+{% endif %}
+
+
+{% if img and image_format %}
+
+    {% set width = img.sizes[image_format].width %}
+    {% set height = img.sizes[image_format].height %}
+    {% set src = img.sizes[image_format] %}
+    {% set alt = img.alt %}
+    <img width="{{ width }}" height="{{ height }}" src="{{ src }}" alt="{{ alt }}">
+
+{% endif %}
+
+{% if img is empty %}
+    <img width="500" height="500" src="{{ theme.link }}/static/placeholder_image.svg" alt="Logo de {{ site.name }} - Aucune image trouvée">
+{% endif %}
+
+{% set img = null %}
+{% set image_format = null %}
+{% set is_fs = false %}

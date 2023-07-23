@@ -1,0 +1,18 @@
+{% if products_types %}
+<section class="section_productsTypes bg bg-pretty hidden-animate">
+    <div class="wrapper">
+        <h2>
+            <span>{{ p.products_st }}</span>
+            {{ p.products_t }}
+        </h2>
+
+        <ul class="list list--3col">
+            {% for item in products_types %}
+            <li>
+                {% include 'blocks/product-type-card.twig' %}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
+{% endif %}

@@ -1,0 +1,79 @@
+{% extends "base.twig" %}
+
+
+{% block heading %}
+
+{% set block = p.meta('itr_content') %}
+<section class="heading-fp hidden-animate">
+    <div class="wrapper">
+
+        <div class="heading-fp-text">
+            <h1 class="h2 red-line">
+                <span>{{ block.st }}</span>
+                {{ block.t }}
+            </h1>
+            
+            <div class="wysiwyg">{{ block.ctn }}</div>
+
+            {% include "blocks/buttons-group.twig" %}
+        </div>
+
+        <div class="heading-fp-slider">
+            {% for item in p.meta('slider') %}
+            <div>
+
+                {% set link = item.link %}
+                {% set img = item.img %}
+                
+                <div class="slide-img img_gradient img_gradient-left">
+                    {% include 'blocks/image.twig' %}
+                </div>
+
+                {% include 'blocks/btn-lg.twig' %}
+
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+
+
+{% block content %}
+
+
+<!-- section product types -->
+{% set products_types = p.meta('products_types_rel') %}
+{% include 'sections/product-types.twig' %}
+
+
+<!-- content repeater -->
+{% set switch = false %}
+{% set content_repeater = p.meta('content_repeater') %}
+{% include 'sections/content_repeater.twig' %}
+
+
+<!-- section icon-cards -->
+{% set slug = 'values' %}
+{% set section_classes ="bg bg-gradient-top" %}
+{% include 'sections/icon-cards.twig' %}
+
+
+<!-- section projets -->
+{% set section_classes = "bg bg-pretty" %}
+{% include 'sections/projects.twig' %}
+
+
+<!-- section icon-cards -->
+{% set slug = 'services' %}
+{% set section_classes ="bg bg-gradient-bottom" %}
+{% include 'sections/icon-cards.twig' %}
+
+
+<!-- section news -->
+{% set section_classes = empty %}
+{% include 'sections/latest-news.twig' %}
+
+{% endblock %}

@@ -1,0 +1,122 @@
+{% extends "base.twig" %}
+
+
+{% block heading %}
+<section class="heading heading--productType hidden-animate">
+    <span class="heading-bg loading">
+        {% set img = p.meta('img') %}
+        {% set is_fs = true %}
+        {% include 'blocks/image.twig' %}
+
+        {% set video = p.meta('video_file') %}
+        {% if video %}
+        <video class="video defer" autoplay muted loop preload="auto" width="{{ video.width }}" height="{{ video.height }}">
+            <source  data-src="{{ video.url }}" src="..." type="video/{{ video.subtype }}">
+            Votre navigateur ne supporte pas ce format de vidéo.
+        </video>
+        {% endif %}
+
+    </span>
+
+    <div class="wrapper">
+
+        {% set title = p.heading_title != "" ? p.heading_title : p.title %}
+
+        <h1>{{ title }}</h1>
+
+        {% set link = p.btn %}
+        {% include 'blocks/btn-lg.twig' %}
+    </div>
+    
+</section>
+{% endblock %}
+
+
+
+
+{% block content %}
+
+{% set projects = Post(p.projects_rel) %}
+{% set block_slug = 'projects' %}
+{% include 'sections/projects.twig' %}
+
+
+
+{% set slug = 'advantages' %}
+{% include 'sections/icon-cards.twig' %}
+
+
+
+{% if p.display_links == false %}
+<section class="section_suBtax bg bg-pretty">
+
+{% set subTaxonomies = p.children %}
+{% for tax in subTaxonomies %}
+    {% set posts = tax.get_posts() %}
+    
+    {% if posts %}
+        <div class="wrapper">
+            <h2>
+                <span>{{ p.title }}</span>
+                {{ tax.title }}
+            </h2>
+            
+            <div class="section_suBtax-slider">
+                {% for item in posts %}
+                {% include 'blocks/product-card.twig' %}
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+{% endfor %}
+</section>
+{% else %}
+
+{% if p.links %}
+<section class="section_links">
+    <ul class="section_links-list">
+        {% for link in p.links %}
+        <li class="section_links-list-item">
+            {% set img = link.img %}
+            <span>{% include "blocks/image.twig" %}</span>
+
+            {% set link = link.link %}
+            {% include 'blocks/btn-lg.twig' %}
+        </li>
+        {% endfor %}
+    </ul>
+</section>
+{% endif %}
+
+{% endif %}
+
+
+<section class="section_faq bg bg-pretty hidden-animate">
+    <div class="wrapper">
+        <h2>
+            <span>{{ p.faq_st }}</span>
+            {{ p.faq_t }}
+        </h2>
+
+        <div class="section_faq-qa">
+            <div class="card card-body">
+                {% set collapses = p.meta('faqs_rel') %}
+                {% include 'blocks/collapse-repeater.twig' %}
+            </div>
+        </div>
+
+        <h3>
+            <span>{{ g.faq_form_st }}</span>
+            {{ g.faq_form_t }}
+        </h3>
+
+        <div class="section_faq-form">
+            <div class="card card-body">
+                {{ function('do_shortcode', '[wpforms id="633" title="false"]') }}
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

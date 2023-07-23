@@ -1,0 +1,18 @@
+{% if p.meta(slug) %}
+<section class="section_iconCard {{ section_classes }} hidden-animate">
+    <div class="wrapper">
+        <h2>
+            <span>{{ p.meta(slug ~ '_st') }}</span>
+            {{ p.meta(slug ~ '_t') }}
+        </h2>
+        <div class="list-md list--3col section_iconCard-list">
+            {% for item in p.meta(slug) %}
+            <div>
+                {% include 'blocks/icon-card.twig' %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+{% set slug = empty %}

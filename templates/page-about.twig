@@ -1,0 +1,77 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+
+<section class="section_content2 hidden-animate">
+    <div class="wrapper">
+        <div class="section_content2-text">
+            {% set block = p.meta('itr_content') %}
+            {% include 'blocks/content-block.twig' %}
+        </div>
+        <div class="section_content2-img">
+            {% set img = p.meta('img') %}
+            {% include 'blocks/image.twig' %}
+        </div>
+    </div>
+</section>
+
+
+
+<!-- section icon-cards -->
+{% set slug = 'values' %}
+{% set section_classes ="bg bg-gradient-top" %}
+{% include 'sections/icon-cards.twig' %}
+
+
+
+<!-- section video -->
+{% if p.video_embed %}
+<section class="section_video bg bg-pretty">
+    <div class="wrapper">
+        <div class="section_video-wrapper">
+            {% set img = p.meta('video_thumbnail') %}
+            {% include 'blocks/image.twig' %}
+
+            <button class="btn btn-lg js--openVideo">
+                <span class="btn-lg-label">Vidéo</span>
+                <div class="btn-lg-icon">
+                    {% include 'static/icons/play.svg' %}
+                </div>
+            </button>
+            
+            <div class="section_video-media">
+                {% set media_type = p.video_type %}
+                {% if media_type == "embed" %}
+                <iframe class="video" data-src="{{ p.video_embed }}" src="..." frameborder="0"></iframe>
+                {% else %}
+                {% set video = p.meta('video_file') %}
+                <video class="video" width="{{ video.width }}" height="{{ video.height }}" controls>
+                    <source  data-src="{{ video.url }}" src="..." type="video/{{ video.subtype }}">
+                    Votre navigateur ne supporte pas ce format de vidéo.
+                </video>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}
+
+
+
+
+<!-- section projets -->
+{% set projects = Post(p.projects_rel) %}
+{% include 'sections/projects.twig' %}
+
+
+
+{% if p.display_news %}
+<!-- section news -->
+{% set section_classes = 'bg bg-pretty' %}
+{% include 'sections/latest-news.twig' %}
+{% endif %}
+
+
+
+{% endblock %}

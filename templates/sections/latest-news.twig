@@ -1,0 +1,31 @@
+{% set t = p.news_t is not empty ? p.news_t : g.news_ph.t %}
+{% set st = p.news_st is not empty ? p.news_st : g.news_ph.st %}
+
+{% if news %}
+<section class="section_news {{ section_classes }} hidden-animate">
+    <div class="wrapper">
+        <div class="section_news-text">
+            <h2>
+                <span>{{ st }}</span>
+                {{ t }}
+            </h2>
+        </div>
+
+        <div class="list-md list--3col">
+            {% for item in news %}
+            <div>
+                {% include 'blocks/news-card.twig' %}
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="centered_btn">
+            <span aria-hidden="true"></span>
+            <a class="btn btn-white" href="{{ news_link }}">Voir toutes les actualités</a>
+            <span aria-hidden="true"></span>
+        </div>
+    </div>
+</section>
+{% endif %}
+{% set switch_section_projects = false %}
+{% set section_classes = "" %}

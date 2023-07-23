@@ -1,0 +1,52 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+{% for product in products %}
+
+<section class="section_content{% if switch %} reverse{% endif %} {% if loop.first %}section_content--first{% endif %}">
+    <div class="wrapper">
+        <div class="section_content-text">
+            {% set block = product.meta('itr_content') %}
+            {% include 'blocks/content-block.twig' %}
+        </div>
+        <div class="section_content-media">
+            {% set img = product.meta('img') %}
+
+            <div class="section_content-media-img img_gradient {% if switch %} img_gradient-left{% else %} img_gradient-right{% endif %}">
+                {% include 'blocks/image.twig' %}
+            </div>
+
+            {% set link = { 'title' : 'Demander un devis', 'url' : '#contact' } %}
+            {% set cutom_icon = 'email' %}
+            {% set custom_attributes = 'data-form="' ~ product.id ~ '"' %}
+            {% if link.url is not empty %}
+            {% include 'blocks/btn-lg.twig' %}
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% set switch = not switch %}
+{% endfor %}
+
+
+<!-- section projets -->
+{% set section_classes = "bg bg-pretty" %}
+{% set projects = p.meta('projects_rel') %}
+{% include 'sections/projects.twig' %}
+
+
+<!-- section produits -->
+{% if p.display_product_types %}
+{% set products_types = p.meta('products_types_rel_copier') %}
+{% include 'sections/product-types.twig' %}
+{% endif %}
+
+<!-- section news -->
+{% if p.display_news %}
+{% set section_classes = empty %}
+{% include 'sections/latest-news.twig' %}
+{% endif %}
+
+
+{% endblock %}
