@@ -1204,7 +1204,7 @@ body.lb-disable-scrolling {
     transform: scale(1);
   }
 }
-textarea, input, select, option {
+textarea, input, select, option, .choices {
   background-color: #f1f1f1;
   color: #8b8b8b;
   border: none;
@@ -1215,15 +1215,15 @@ textarea, input, select, option {
   padding: 1rem 1.25rem;
   padding-left: 3.25rem;
 }
-textarea:focus, input:focus, select:focus, option:focus {
+textarea:focus, input:focus, select:focus, option:focus, .choices:focus {
   outline: none !important;
 }
-textarea::placeholder, input::placeholder, select::placeholder, option::placeholder {
+textarea::placeholder, input::placeholder, select::placeholder, option::placeholder, .choices::placeholder {
   color: #8b8b8b;
   text-transform: uppercase;
   font-weight: 900;
 }
-textarea.wpforms-error, input.wpforms-error, select.wpforms-error, option.wpforms-error {
+textarea.wpforms-error, input.wpforms-error, select.wpforms-error, option.wpforms-error, .choices.wpforms-error {
   border-color: #AB1A0A !important;
 }
 
@@ -1338,6 +1338,9 @@ textarea {
   pointer-events: none;
   transform: rotate(0);
   transition: transform 0.3s cubic-bezier(0.83, 0, 0.17, 1);
+}
+.wpforms-container .wpforms-field-container .wpforms-field .choices::after {
+  content: none !important;
 }
 .wpforms-container .wpforms-field-container .wpforms-field::before {
   position: absolute;
