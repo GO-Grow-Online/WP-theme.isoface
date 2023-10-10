@@ -182,6 +182,9 @@ textarea {
                 } 
 
                 .choices {
+
+                    max-width: 100%!important;
+
                     &::after {
                         content: none!important;
                     }
@@ -219,7 +222,7 @@ textarea {
                     }
 
                     input.choices__input {
-                        display: none!important;
+                        width: 100%!important;
                     }
                 }
 

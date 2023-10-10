@@ -1340,6 +1340,9 @@ textarea {
   transform: rotate(0);
   transition: transform 0.3s cubic-bezier(0.83, 0, 0.17, 1);
 }
+.wpforms-container .wpforms-field-container .wpforms-field .choices {
+  max-width: 100% !important;
+}
 .wpforms-container .wpforms-field-container .wpforms-field .choices::after {
   content: none !important;
 }
@@ -1367,7 +1370,7 @@ textarea {
   display: flex;
 }
 .wpforms-container .wpforms-field-container .wpforms-field .choices input.choices__input {
-  display: none !important;
+  width: 100% !important;
 }
 .wpforms-container .wpforms-field-container .wpforms-field::before {
   position: absolute;
