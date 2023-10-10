@@ -14,8 +14,6 @@ section.heading-fp {
         
         &-slider {
 
-            height: 100%;
-
             &::after {
                 content: "";
                 height: $white-corner-size-mobile;
@@ -32,6 +30,7 @@ section.heading-fp {
             .slide-img {
                 height: $fp-slider-image-height!important;
                 position: relative;
+                max-height: 650px;
 
                 img {
                     height: 100%;

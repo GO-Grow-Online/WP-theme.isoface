@@ -2653,9 +2653,6 @@ section.heading-fp .heading-fp-text {
   padding: 1.5rem;
   padding-bottom: 4rem;
 }
-section.heading-fp .heading-fp-slider {
-  height: 100%;
-}
 section.heading-fp .heading-fp-slider::after {
   content: "";
   height: 4rem;
@@ -2671,6 +2668,7 @@ section.heading-fp .heading-fp-slider::after {
 section.heading-fp .heading-fp-slider .slide-img {
   height: calc(100px + 50vw) !important;
   position: relative;
+  max-height: 650px;
 }
 section.heading-fp .heading-fp-slider .slide-img img {
   height: 100%;
