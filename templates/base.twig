@@ -50,13 +50,15 @@
 						</div>
 					</div>
 					<ul class="section_contact-list">
-						{% if g.phone %}
+						{% if g.meta('phones') %}
+						{% for phone in g.meta('phones') %}
 						<li>
-							{% set link = {'title': g.phone, 'url': 'tel:' ~ g.phone } %}
+							{% set link = {'title': phone.num, 'url': 'tel:' ~ phone.num } %}
 							{% set custom_icon = 'phone' %}
 							{% set custom_classes = 'btn-lg--reverse' %}
 							{% include 'blocks/btn-lg.twig' %}
 						</li>
+						{% endfor %}
 						{% endif %}
 						{% if g.email %}
 						<li>
