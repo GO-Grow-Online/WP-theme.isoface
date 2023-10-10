@@ -1212,8 +1212,9 @@ textarea, input, select, option, .choices__inner {
   width: 100% !important;
   font-weight: 900;
   appearance: none;
-  padding: 1rem 1.25rem;
-  padding-left: 3.25rem;
+  border: none !important;
+  padding: 1rem 1.25rem !important;
+  padding-left: 3.25rem !important;
 }
 textarea:focus, input:focus, select:focus, option:focus, .choices__inner:focus {
   outline: none !important;

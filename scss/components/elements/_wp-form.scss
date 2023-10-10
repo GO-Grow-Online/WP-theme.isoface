@@ -10,9 +10,10 @@ textarea, input, select, option, .choices__inner {
     width: 100%!important;
     font-weight: 900;
     appearance: none;
+    border: none!important;
     
-    padding: $p-y $p-x;
-    padding-left: calc($p-x + 2rem);
+    padding: $p-y $p-x!important;
+    padding-left: calc($p-x + 2rem)!important;
 
     &:focus {
         outline: none!important;
