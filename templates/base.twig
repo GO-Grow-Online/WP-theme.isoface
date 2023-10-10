@@ -50,8 +50,8 @@
 						</div>
 					</div>
 					<ul class="section_contact-list">
-						{% if g.meta('phones') %}
-						{% for phone in g.meta('phones') %}
+						{% if g.phones %}
+						{% for phone in g.phones %}
 						<li>
 							{% set link = {'title': phone.num, 'url': 'tel:' ~ phone.num } %}
 							{% set custom_icon = 'phone' %}
