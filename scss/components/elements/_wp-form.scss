@@ -186,9 +186,7 @@ textarea {
                         content: none!important;
                     }
 
-                    .choices__list {
-                        flex-wrap: wrap;
-                        gap: 0.25rem;
+                    &__list {
 
                         .choices__item {
                             background-color: $red!important;
@@ -197,11 +195,15 @@ textarea {
                             border-radius: 0!important;
                             border: none!important;
                         }
-                    }
-                }
 
-                .choices__list.choices__list--dropdown.is-active {
-                    .choices__list { display: flex; }
+                    }
+                    &__list--dropdown {
+                        gap: 0.25rem;
+                        flex-wrap: wrap;
+                        .is-active {
+                            .choices__list { display: flex; }
+                        }
+                    }
                 }
 
                 // icons

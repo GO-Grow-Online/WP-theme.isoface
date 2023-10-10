@@ -1343,18 +1343,18 @@ textarea {
 .wpforms-container .wpforms-field-container .wpforms-field .choices::after {
   content: none !important;
 }
-.wpforms-container .wpforms-field-container .wpforms-field .choices .choices__list {
-  flex-wrap: wrap;
-  gap: 0.25rem;
-}
-.wpforms-container .wpforms-field-container .wpforms-field .choices .choices__list .choices__item {
+.wpforms-container .wpforms-field-container .wpforms-field .choices__list .choices__item {
   background-color: #AB1A0A !important;
   margin: 0 !important;
   font-size: 0.85rem !important;
   border-radius: 0 !important;
   border: none !important;
 }
-.wpforms-container .wpforms-field-container .wpforms-field .choices__list.choices__list--dropdown.is-active .choices__list {
+.wpforms-container .wpforms-field-container .wpforms-field .choices__list--dropdown {
+  gap: 0.25rem;
+  flex-wrap: wrap;
+}
+.wpforms-container .wpforms-field-container .wpforms-field .choices__list--dropdown .is-active .choices__list {
   display: flex;
 }
 .wpforms-container .wpforms-field-container .wpforms-field::before {
