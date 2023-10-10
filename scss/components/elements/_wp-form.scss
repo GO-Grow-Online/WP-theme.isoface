@@ -187,7 +187,6 @@ textarea {
                     }
 
                     .choices__list {
-                        display: flex;
                         flex-wrap: wrap;
                         gap: 0.25rem;
 
@@ -198,6 +197,10 @@ textarea {
                             border-radius: 0!important;
                         }
                     }
+                }
+
+                .choices__list.choices__list--dropdown.is-active {
+                    .choices__list { display: flex; }
                 }
 
                 // icons

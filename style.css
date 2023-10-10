@@ -1344,7 +1344,6 @@ textarea {
   content: none !important;
 }
 .wpforms-container .wpforms-field-container .wpforms-field .choices .choices__list {
-  display: flex;
   flex-wrap: wrap;
   gap: 0.25rem;
 }
@@ -1353,6 +1352,9 @@ textarea {
   margin: 0 !important;
   font-size: 0.85rem !important;
   border-radius: 0 !important;
+}
+.wpforms-container .wpforms-field-container .wpforms-field .choices__list.choices__list--dropdown.is-active .choices__list {
+  display: flex;
 }
 .wpforms-container .wpforms-field-container .wpforms-field::before {
   position: absolute;
