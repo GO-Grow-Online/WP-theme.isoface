@@ -204,6 +204,13 @@ textarea {
 
                     }
                     &__list--dropdown {
+
+                        border-top: 1px solid $inactive-color;
+                        
+                        .choices__item {
+                            background-color: transparent!important;
+                        }
+
                         gap: 0.25rem;
                         flex-wrap: wrap;
                         .is-active {

@@ -1356,8 +1356,12 @@ textarea {
   gap: 0.25rem;
 }
 .wpforms-container .wpforms-field-container .wpforms-field .choices__list--dropdown {
+  border-top: 1px solid #f1f1f1;
   gap: 0.25rem;
   flex-wrap: wrap;
+}
+.wpforms-container .wpforms-field-container .wpforms-field .choices__list--dropdown .choices__item {
+  background-color: transparent !important;
 }
 .wpforms-container .wpforms-field-container .wpforms-field .choices__list--dropdown .is-active .choices__list {
   display: flex;
