@@ -2503,6 +2503,7 @@ main {
   height: 5px;
   background: #AB1A0A;
   vertical-align: 0.25rem;
+  border-radius: 1000px;
 }
 
 .link-icon {
