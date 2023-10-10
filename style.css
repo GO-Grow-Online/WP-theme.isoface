@@ -1350,6 +1350,11 @@ textarea {
   border-radius: 0 !important;
   border: none !important;
 }
+.wpforms-container .wpforms-field-container .wpforms-field .choices__list--multiple {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
 .wpforms-container .wpforms-field-container .wpforms-field .choices__list--dropdown {
   gap: 0.25rem;
   flex-wrap: wrap;

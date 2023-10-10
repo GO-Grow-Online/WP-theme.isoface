@@ -196,6 +196,12 @@ textarea {
                             border: none!important;
                         }
 
+                        &--multiple {
+                            display: flex;
+                            flex-wrap: wrap;
+                            gap: 0.25rem;
+                        }
+
                     }
                     &__list--dropdown {
                         gap: 0.25rem;
