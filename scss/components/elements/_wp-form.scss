@@ -163,8 +163,8 @@ textarea {
                     &::after {
                         content: url(static/icons/chevron.svg);
                         position: absolute;
-                        right: $p-x;
-                        top: ($p-x * 0.7 + 1.25rem);
+                        right: $p-x; 
+                        top: calc($p-x * 0.7 + 1.25rem);
 
                         pointer-events: none;
 
