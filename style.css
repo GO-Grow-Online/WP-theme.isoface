@@ -2495,6 +2495,16 @@ main {
   padding-top: 5rem;
 }
 
+.wysiwyg ul li a::before {
+  content: "";
+  display: inline-block;
+  margin-right: 0.75rem;
+  width: 5px;
+  height: 5px;
+  background: #AB1A0A;
+  vertical-align: 0.25rem;
+}
+
 .link-icon {
   font-size: 1rem;
   text-transform: uppercase;

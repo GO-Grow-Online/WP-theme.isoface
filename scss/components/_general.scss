@@ -56,6 +56,22 @@ main {
     padding-top: $header-height-mobile;
 }
 
+.wysiwyg {
+    ul {
+        li {
+            a::before {
+                content: "";
+                display: inline-block;
+                margin-right: 0.75rem;
+                width: 5px;
+                height: 5px;
+                background: $red;
+                vertical-align: 0.25rem;
+            }
+        }
+    }
+}
+
 .link-icon {
     font-size: 1rem;
     text-transform: uppercase;
