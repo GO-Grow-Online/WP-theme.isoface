@@ -1366,6 +1366,9 @@ textarea {
 .wpforms-container .wpforms-field-container .wpforms-field .choices__list--dropdown .is-active .choices__list {
   display: flex;
 }
+.wpforms-container .wpforms-field-container .wpforms-field .choices input.choices__input {
+  display: none !important;
+}
 .wpforms-container .wpforms-field-container .wpforms-field::before {
   position: absolute;
   z-index: 1;

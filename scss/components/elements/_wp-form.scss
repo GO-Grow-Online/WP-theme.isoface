@@ -217,6 +217,10 @@ textarea {
                             .choices__list { display: flex; }
                         }
                     }
+
+                    input.choices__input {
+                        display: none!important;
+                    }
                 }
 
                 // icons
