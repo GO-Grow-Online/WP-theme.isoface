@@ -1352,6 +1352,7 @@ textarea {
   margin: 0 !important;
   font-size: 0.85rem !important;
   border-radius: 0 !important;
+  border: none !important;
 }
 .wpforms-container .wpforms-field-container .wpforms-field .choices__list.choices__list--dropdown.is-active .choices__list {
   display: flex;
