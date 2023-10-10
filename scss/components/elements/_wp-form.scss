@@ -164,7 +164,7 @@ textarea {
                         content: url(static/icons/chevron.svg);
                         position: absolute;
                         right: $p-x;
-                        bottom: ($p-x * 0.7);
+                        top: ($p-x * 0.7 + 0.5rem);
 
                         pointer-events: none;
 
