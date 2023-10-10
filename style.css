@@ -1335,7 +1335,7 @@ textarea {
   content: url(static/icons/chevron.svg);
   position: absolute;
   right: 1.25rem;
-  top: 2.125rem;
+  top: 2.5rem;
   pointer-events: none;
   transform: rotate(0);
   transition: transform 0.3s cubic-bezier(0.83, 0, 0.17, 1);
