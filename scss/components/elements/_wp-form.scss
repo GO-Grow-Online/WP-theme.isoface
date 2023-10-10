@@ -261,6 +261,8 @@ textarea {
                     content: url(static/icons/question.svg);
                 }
                 &.product-icon::before {
+                    bottom: inherit;
+                    top: calc($p-y + 1.5rem);
                     content: url(static/icons/product.svg);
                 }
             }

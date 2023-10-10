@@ -1400,6 +1400,8 @@ textarea {
   content: url(static/icons/question.svg);
 }
 .wpforms-container .wpforms-field-container .wpforms-field.product-icon::before {
+  bottom: inherit;
+  top: 2.5rem;
   content: url(static/icons/product.svg);
 }
 
