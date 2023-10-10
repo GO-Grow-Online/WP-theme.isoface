@@ -2,7 +2,7 @@ $sp : map-get($sec-spacings, mobile-x);
 $p-x : 1.25rem;
 $p-y : 1rem;
 
-textarea, input, select, option, .choices {
+textarea, input, select, option, .choices__inner {
     background-color: $inactive-color;
     color: darken($inactive-color, 40%);
     border: none;

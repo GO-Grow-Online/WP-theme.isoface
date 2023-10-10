@@ -1204,7 +1204,7 @@ body.lb-disable-scrolling {
     transform: scale(1);
   }
 }
-textarea, input, select, option, .choices {
+textarea, input, select, option, .choices__inner {
   background-color: #f1f1f1;
   color: #8b8b8b;
   border: none;
@@ -1215,15 +1215,15 @@ textarea, input, select, option, .choices {
   padding: 1rem 1.25rem;
   padding-left: 3.25rem;
 }
-textarea:focus, input:focus, select:focus, option:focus, .choices:focus {
+textarea:focus, input:focus, select:focus, option:focus, .choices__inner:focus {
   outline: none !important;
 }
-textarea::placeholder, input::placeholder, select::placeholder, option::placeholder, .choices::placeholder {
+textarea::placeholder, input::placeholder, select::placeholder, option::placeholder, .choices__inner::placeholder {
   color: #8b8b8b;
   text-transform: uppercase;
   font-weight: 900;
 }
-textarea.wpforms-error, input.wpforms-error, select.wpforms-error, option.wpforms-error, .choices.wpforms-error {
+textarea.wpforms-error, input.wpforms-error, select.wpforms-error, option.wpforms-error, .choices__inner.wpforms-error {
   border-color: #AB1A0A !important;
 }
 
