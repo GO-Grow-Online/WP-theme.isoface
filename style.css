@@ -2495,7 +2495,7 @@ main {
   padding-top: 5rem;
 }
 
-.wysiwyg ul li a::before {
+.wysiwyg ul li::before {
   content: "";
   display: inline-block;
   margin-right: 0.75rem;
