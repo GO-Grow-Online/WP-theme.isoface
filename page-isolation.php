@@ -13,7 +13,6 @@ if (get_field('display_news') == true) {
     ) );
 }
 
-var_dump(get_field('cat_to_display'));
 $term = get_field('cat_to_display')[0]->slug;
 if($term != null) {
 
