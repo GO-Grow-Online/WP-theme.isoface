@@ -17,7 +17,7 @@ $terms = get_field('cat_to_display');
 if ($terms && is_array($terms) && isset($terms[0])) {
     $term = $terms[0]->slug;
 } else {
-    $term = null;
+    $term = $terms->slug;
 }
 if($term != null) {
 
