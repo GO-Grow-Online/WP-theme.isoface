@@ -13,8 +13,12 @@ if (get_field('display_news') == true) {
     ) );
 }
 
-$terms = get_field('cat_to_display')[0];
-$term = $terms->slug;
+$terms = get_field('cat_to_display');
+if ($terms && is_array($terms) && isset($terms[0])) {
+    $term = $terms[0]->slug;
+} else {
+    $term = null;
+}
 if($term != null) {
 
     $context['products'] = Timber::get_posts(
