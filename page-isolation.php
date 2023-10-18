@@ -13,7 +13,8 @@ if (get_field('display_news') == true) {
     ) );
 }
 
-$term = get_field('cat_to_display')[0]->slug;
+$terms = get_field('cat_to_display')[0];
+$term = $terms->slug;
 if($term != null) {
 
     $context['products'] = Timber::get_posts(
@@ -33,4 +34,3 @@ if($term != null) {
 
 
 Timber::render( 'page-isolation.twig' , $context );
-var_dump(get_field('cat_to_display'));
