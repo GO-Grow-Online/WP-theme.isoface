@@ -14,6 +14,7 @@ if (get_field('display_news') == true) {
 }
 
 $term = get_field('cat_to_display')[0]->slug;
+var_dump(get_field('cat_to_display'));
 if($term != null) {
 
     $context['products'] = Timber::get_posts(
