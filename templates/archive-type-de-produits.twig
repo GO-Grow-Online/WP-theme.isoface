@@ -69,7 +69,7 @@
     %}
 
 
-    {% set posts = fn(get_posts, args) %}
+    {% set posts = get_posts(args) %}
 
     {% if posts %}
         <div class="wrapper">
