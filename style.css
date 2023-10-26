@@ -3046,7 +3046,7 @@ body.tax-type-de-produits section.section_suBtax .section_suBtax-slider .slick-d
   border-width: 0.1rem;
   border-color: #f1f1f1;
 }
-body.tax-type-de-produits section.section_suBtax .section_suBtax-slider .slick-dots li.active button {
+body.tax-type-de-produits section.section_suBtax .section_suBtax-slider .slick-dots li.slick-active button {
   border-color: #AB1A0A;
   border-width: 0.2rem;
 }
