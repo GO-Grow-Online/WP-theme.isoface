@@ -44,8 +44,6 @@ if ( is_day() ) {
 	$context['title'] = get_the_title();
 	$context['p'] = new Timber\Term();
 
-	
-
 	$context['projects'] = get_field('projects_rel');
 
 	$templates = array( 'archive-type-de-produits.twig' );
