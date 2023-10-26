@@ -42,9 +42,7 @@ if ( is_day() ) {
 } elseif (is_tax('type-de-produits')) {
 
 	$context['title'] = get_the_title();
-	$context['p'] = new Timber\Term(
-			'order' => null,
-	);
+	$context['p'] = new Timber\Term();
 
 	$context['projects'] = get_field('projects_rel');
 
