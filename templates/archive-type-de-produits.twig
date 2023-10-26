@@ -48,7 +48,7 @@
 
     {{ p.slug }}
 
-{% set subTaxonomies =  get_terms({
+{% set subTaxonomies = fn('get_terms', {
     'taxonomy': p.slug,
     'parent': p.id
 }) %}
