@@ -61,7 +61,8 @@
         'post_type': 'produits',
         'tax_query': [{ 'taxonomy': tax.taxonomy, 'field': 'id', 'terms': tax.term_id }]
     } %}
-    {% set posts = Timber::get_posts(args) %}
+
+    {% set posts = fn(get_posts, args) %}
 
     
     {% if posts %}
