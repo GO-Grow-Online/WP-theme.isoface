@@ -86,12 +86,18 @@ body.tax-type-de-produits {
 
                             button {
                                 border-width: 0.1rem;
-                                border-color: $inactive-color;
+                                border-color: darken($inactive-color, 5%);
                             }
 
-                            &.slick-active button {
-                                border-color: $red;
-                                border-width: 0.2rem;
+                            &.slick-active {
+                                
+                                width: 0.6rem;
+                                height: 0.6rem;
+                                
+                                button {
+                                    border-color: $red;
+                                    border-width: 0.2rem;
+                                }
                             }
                         }
                     }
