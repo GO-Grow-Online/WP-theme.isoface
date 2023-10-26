@@ -3044,15 +3044,18 @@ body.tax-type-de-produits section.section_suBtax .section_suBtax-slider .slick-d
 }
 body.tax-type-de-produits section.section_suBtax .section_suBtax-slider .slick-dots li button {
   border-width: 0.1rem;
-  border-color: #e4e4e4;
+  border-color: transparent;
+  background-color: #f1f1f1;
+  transition: all 0.3s cubic-bezier(0.83, 0, 0.17, 1);
 }
 body.tax-type-de-produits section.section_suBtax .section_suBtax-slider .slick-dots li.slick-active {
   width: 0.6rem;
   height: 0.6rem;
 }
 body.tax-type-de-produits section.section_suBtax .section_suBtax-slider .slick-dots li.slick-active button {
-  border-color: #AB1A0A;
+  background-color: #AB1A0A;
   border-width: 0.2rem;
+  border-color: transparent;
 }
 body.tax-type-de-produits section.section_suBtax .section_suBtax-slider .slick-slide {
   opacity: 0;

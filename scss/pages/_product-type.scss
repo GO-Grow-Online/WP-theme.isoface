@@ -86,7 +86,10 @@ body.tax-type-de-produits {
 
                             button {
                                 border-width: 0.1rem;
-                                border-color: darken($inactive-color, 5%);
+                                border-color: transparent;
+                                background-color: $inactive-color;
+
+                                transition: all $fast $bezier;
                             }
 
                             &.slick-active {
@@ -95,8 +98,9 @@ body.tax-type-de-produits {
                                 height: 0.6rem;
                                 
                                 button {
-                                    border-color: $red;
+                                    background-color: $red;
                                     border-width: 0.2rem;
+                                    border-color: transparent;
                                 }
                             }
                         }
