@@ -81,9 +81,15 @@ body.tax-type-de-produits {
                 .slick {
                     &-dots {
                         flex-wrap: wrap;
-                        width: calc(100% - (map-get($sec-spacings, mobile-x) *2) - 4rem);
-                        margin-left: map-get($sec-spacings, mobile-x) + 2rem;
+                        width: calc(100% - (map-get($sec-spacings, mobile-x) * 2) - 6rem);
                         gap: 0.5rem;
+
+                        justify-content: center;
+                        left: map-get($sec-spacings, mobile-x) + 3rem;
+                        top: inherit;
+                        bottom: 0;
+    
+
                         li {
                             min-width: 0.4rem;
                             max-width: 0.4rem;
@@ -149,16 +155,6 @@ body.tax-type-de-produits {
                 
                 .slick-list {
                     overflow: visible!important;
-                }
-                .slick-dots {
-                    justify-content: center;
-                    left: 0;
-                    top: inherit;
-                    bottom: 0;
-                    width: 100%;
-        
-                    li {
-                    }
                 }
                 padding-bottom: 3.5rem;
             }
