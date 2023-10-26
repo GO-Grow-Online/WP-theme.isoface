@@ -69,4 +69,4 @@ $context['archive'] = Timber::get_posts( array(
 Timber::render( $templates, $context );
 
 echo get_query_var('slug');
-echo get_query_var('name');
+echo get_query_var('taxonomy');
