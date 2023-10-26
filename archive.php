@@ -63,5 +63,4 @@ $context['archive'] = Timber::get_posts( array(
 
 Timber::render( $templates, $context );
 
-echo 'taxonomy slug' . $context['p']['slug'];
-echo 'parent id' . $context['p']['id'];
+var_dump($context['p']);
