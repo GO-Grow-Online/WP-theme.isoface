@@ -272,6 +272,8 @@ body.tax-type-de-produits {
                                     border-radius: 1000px;
                                     pointer-events: all;
                                     cursor: pointer;
+
+                                    background-color: transparent!important;
                     
                                     transition: border-width $fast $bezier;
                                 }

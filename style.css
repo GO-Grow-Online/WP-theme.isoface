@@ -3177,6 +3177,7 @@ body.tax-type-de-produits section.section_suBtax .section_suBtax-slider .slick-l
     border-radius: 1000px;
     pointer-events: all;
     cursor: pointer;
+    background-color: transparent !important;
     transition: border-width 0.3s cubic-bezier(0.83, 0, 0.17, 1);
   }
   body.tax-type-de-produits section.section_suBtax .section_suBtax-slider .slick-dots li.slick-active button {
