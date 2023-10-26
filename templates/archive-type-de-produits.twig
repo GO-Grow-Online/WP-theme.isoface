@@ -48,7 +48,10 @@
 
     {{ p.slug }}
 
-{% set subTaxonomies = p.children %}
+{% set subTaxonomies =  get_terms({
+    'taxonomy': p.slug,
+    'parent': p.id
+}) %}
 {% for tax in subTaxonomies %}
 
     {% set args = { 'posts_per_page' : -1 } %}
