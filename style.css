@@ -726,8 +726,10 @@ body.lb-disable-scrolling {
 }
 .card svg {
   color: #AB1A0A;
-  width: 1.5rem;
-  height: 1.5rem;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  max-width: 1.5rem;
+  max-height: 1.5rem;
 }
 .card-header-img {
   height: calc(100px + 50vw);
@@ -817,8 +819,10 @@ body.lb-disable-scrolling {
 
 @media (min-width: 1200px) {
   .card svg {
-    width: 1.8rem;
-    height: 1.8rem;
+    max-width: 1.8rem;
+    min-width: 1.8rem;
+    max-height: 1.8rem;
+    min-height: 1.8rem;
   }
   .card-header-img {
     height: calc(50px + 15vw) !important;
