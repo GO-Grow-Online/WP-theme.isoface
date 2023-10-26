@@ -48,7 +48,7 @@
 
     {{ p.slug }}
 
-{% set subTaxonomies = subTax %}
+{% set subTaxonomies = p.children %}
 {% for tax in subTaxonomies %}
 
     {% set args = { 'posts_per_page' : -1 } %}

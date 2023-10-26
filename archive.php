@@ -44,10 +44,10 @@ if ( is_day() ) {
 	$context['title'] = get_the_title();
 	$context['p'] = new Timber\Term();
 
-	$context['subTax'] = Timber::get_terms(array(
+	/* $context['subTax'] = Timber::get_terms(array(
 		'taxonomy' => $context['p']['slug'],
 		'parent' => $context['p']['id'],
-	));
+	));*/ 
 
 	$context['projects'] = get_field('projects_rel');
 
