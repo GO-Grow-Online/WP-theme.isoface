@@ -3048,22 +3048,24 @@ body.tax-type-de-produits section.section_suBtax .section_suBtax-slider .slick-d
   top: inherit;
   bottom: 0;
 }
-body.tax-type-de-produits section.section_suBtax .section_suBtax-slider .slick-dots li button {
-  border-width: 0.1rem;
-  border-color: transparent;
-  background-color: #d8d8d8;
-  transition: all 0.3s cubic-bezier(0.83, 0, 0.17, 1);
-}
-body.tax-type-de-produits section.section_suBtax .section_suBtax-slider .slick-dots li.slick-active {
-  min-width: 0.6rem;
-  max-width: 0.6rem;
-  min-height: 0.6rem;
-  max-height: 0.6rem;
-}
-body.tax-type-de-produits section.section_suBtax .section_suBtax-slider .slick-dots li.slick-active button {
-  background-color: #AB1A0A;
-  border-width: 0.2rem;
-  border-color: transparent;
+@media (max-width: 720px) {
+  body.tax-type-de-produits section.section_suBtax .section_suBtax-slider .slick-dots li button {
+    border-width: 0.1rem;
+    border-color: transparent;
+    background-color: #d8d8d8;
+    transition: all 0.3s cubic-bezier(0.83, 0, 0.17, 1);
+  }
+  body.tax-type-de-produits section.section_suBtax .section_suBtax-slider .slick-dots li.slick-active {
+    min-width: 0.6rem;
+    max-width: 0.6rem;
+    min-height: 0.6rem;
+    max-height: 0.6rem;
+  }
+  body.tax-type-de-produits section.section_suBtax .section_suBtax-slider .slick-dots li.slick-active button {
+    background-color: #AB1A0A;
+    border-width: 0.2rem;
+    border-color: transparent;
+  }
 }
 body.tax-type-de-produits section.section_suBtax .section_suBtax-slider .slick-slide {
   opacity: 0;
@@ -3163,25 +3165,6 @@ body.tax-type-de-produits section.section_suBtax .section_suBtax-slider .slick-l
     top: -5rem !important;
     right: 8rem !important;
     height: fit-content;
-  }
-  body.tax-type-de-produits section.section_suBtax .section_suBtax-slider .slick-dots li {
-    width: 1.1rem;
-    height: 1.1rem;
-    display: flex;
-  }
-  body.tax-type-de-produits section.section_suBtax .section_suBtax-slider .slick-dots li button {
-    width: 100%;
-    height: 100%;
-    font-size: 0;
-    border: 3px solid #fff;
-    border-radius: 1000px;
-    pointer-events: all;
-    cursor: pointer;
-    background-color: transparent !important;
-    transition: border-width 0.3s cubic-bezier(0.83, 0, 0.17, 1);
-  }
-  body.tax-type-de-produits section.section_suBtax .section_suBtax-slider .slick-dots li.slick-active button {
-    border-width: 0.57rem;
   }
 }
 
