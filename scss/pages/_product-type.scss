@@ -96,7 +96,7 @@ body.tax-type-de-produits {
                         }
                         
                         @media (max-width :  map-get($breakpoints, md)) {
-                        gap: 1rem;
+                            gap: 0.5rem;
                             li {
                                 min-width: 0.4rem;
                                 max-width: 0.4rem;

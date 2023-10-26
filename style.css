@@ -3053,7 +3053,7 @@ body.tax-type-de-produits section.section_suBtax .section_suBtax-slider .slick-d
 }
 @media (max-width: 720px) {
   body.tax-type-de-produits section.section_suBtax .section_suBtax-slider .slick-dots {
-    gap: 1rem;
+    gap: 0.5rem;
   }
   body.tax-type-de-produits section.section_suBtax .section_suBtax-slider .slick-dots li {
     min-width: 0.4rem;
