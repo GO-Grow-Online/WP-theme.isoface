@@ -47,7 +47,7 @@
 <section class="section_suBtax bg bg-pretty">
 
 {% set subTaxonomies = fn('get_terms', {
-    'taxonomy': p.slug,
+    'taxonomy': 'type-de-produits',
     'parent': p.id
 }) %}
 {% for tax in subTaxonomies %}
