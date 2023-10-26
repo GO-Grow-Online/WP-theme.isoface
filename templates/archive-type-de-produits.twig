@@ -55,12 +55,10 @@
     {% set args = { 'posts_per_page' : -1 } %}
     {% set posts = tax.get_posts(args) %}
 
-    {# set args = {
-        'post_type': 'produits',
-        'tax_query': [{ 'taxonomy': tax.taxonomy, 'field': 'term_id', 'terms': tax.term_id }]
-    } #}
+    {% set args = { 'posts_per_page': -1, 'post_type': 'produits', 'tax_query': { 'relation': 'AND', 'taxonomy': 'type-de-produits', 'field': 'slug', 'terms': tax.slug } } %}
 
-    {# set posts = fn(get_posts, args) #}
+
+    {% set posts = fn(get_posts, args) %}
 
     {% if posts %}
         <div class="wrapper">
