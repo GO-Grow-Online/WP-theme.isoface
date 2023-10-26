@@ -59,12 +59,11 @@
 
     {% set args = {
         'post_type': 'produits',
-        'tax_query': [{ 'taxonomy': tax.taxonomy, 'field': 'id', 'terms': tax.term_id }]
+        'tax_query': [{ 'taxonomy': tax.taxonomy, 'field': 'term_id', 'terms': tax.term_id }]
     } %}
 
     {% set posts = fn(get_posts, args) %}
 
-    
     {% if posts %}
         <div class="wrapper">
             <h2>
