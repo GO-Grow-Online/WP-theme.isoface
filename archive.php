@@ -44,15 +44,10 @@ if ( is_day() ) {
 	$context['title'] = get_the_title();
 	$context['p'] = new Timber\Term();
 
-	$parent_term = get_queried_object();
-
-	$child_terms = Timber::get_terms(array(
-		'taxonomy' => get_query_var('slug'),
-		'parent' => $parent_term->term_id,
+	$context['subTax'] = Timber::get_terms(array(
+		'taxonomy' => $context['p']['slug'],
+		'parent' => $context['p']['id'],
 	));
-
-	$context['child_terms'] = $child_terms; // Vous pouvez utiliser cette variable dans votre modèle Twig
-
 
 	$context['projects'] = get_field('projects_rel');
 
@@ -68,5 +63,5 @@ $context['archive'] = Timber::get_posts( array(
 
 Timber::render( $templates, $context );
 
-echo get_query_var('slug');
-echo get_query_var('taxonomy');
+echo 'taxonomy slug' . $context['p']['slug'];
+echo 'parent id' . $context['p']['id'];
