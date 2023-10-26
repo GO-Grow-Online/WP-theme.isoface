@@ -3048,6 +3048,9 @@ body.tax-type-de-produits section.section_suBtax .section_suBtax-slider .slick-d
   top: inherit;
   bottom: 0;
 }
+body.tax-type-de-produits section.section_suBtax .section_suBtax-slider .slick-dots li button {
+  border-color: #AB1A0A;
+}
 @media (max-width: 720px) {
   body.tax-type-de-produits section.section_suBtax .section_suBtax-slider .slick-dots li button {
     border-width: 0.1rem;
