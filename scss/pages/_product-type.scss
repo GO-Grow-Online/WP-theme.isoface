@@ -98,7 +98,11 @@ body.tax-type-de-produits {
                         @media (max-width :  map-get($breakpoints, md)) {
                         gap: 1rem;
                             li {
-
+                                min-width: 0.4rem;
+                                max-width: 0.4rem;
+                                min-height: 0.4rem;
+                                max-height: 0.4rem;
+                                transition: all $fast $bezier;
                                 button {
                                     border-width: 0.1rem;
                                     border-color: transparent;

@@ -3055,6 +3055,13 @@ body.tax-type-de-produits section.section_suBtax .section_suBtax-slider .slick-d
   body.tax-type-de-produits section.section_suBtax .section_suBtax-slider .slick-dots {
     gap: 1rem;
   }
+  body.tax-type-de-produits section.section_suBtax .section_suBtax-slider .slick-dots li {
+    min-width: 0.4rem;
+    max-width: 0.4rem;
+    min-height: 0.4rem;
+    max-height: 0.4rem;
+    transition: all 0.3s cubic-bezier(0.83, 0, 0.17, 1);
+  }
   body.tax-type-de-produits section.section_suBtax .section_suBtax-slider .slick-dots li button {
     border-width: 0.1rem;
     border-color: transparent;
