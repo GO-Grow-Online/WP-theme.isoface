@@ -80,22 +80,27 @@ body.tax-type-de-produits {
 
                 .slick {
                     &-dots {
+                        gap: 0.5rem;
                         li {
-                            width: 0.4rem;
-                            height: 0.4rem;
+                            min-width: 0.4rem;
+                            max-width: 0.4rem;
+                            min-height: 0.4rem;
+                            max-height: 0.4rem;
 
                             button {
                                 border-width: 0.1rem;
                                 border-color: transparent;
-                                background-color: $inactive-color;
+                                background-color: darken($inactive-color, 10%);
 
                                 transition: all $fast $bezier;
                             }
 
                             &.slick-active {
                                 
-                                width: 0.6rem;
-                                height: 0.6rem;
+                                min-width: 0.6rem;
+                                max-width: 0.6rem;
+                                min-height: 0.6rem;
+                                max-height: 0.6rem;
                                 
                                 button {
                                     background-color: $red;

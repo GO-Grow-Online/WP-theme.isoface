@@ -3038,19 +3038,26 @@ body.tax-type-de-produits section.section_suBtax .section_suBtax-slider {
 body.tax-type-de-produits section.section_suBtax .section_suBtax-slider .card {
   margin: 0 0.875rem;
 }
+body.tax-type-de-produits section.section_suBtax .section_suBtax-slider .slick-dots {
+  gap: 0.5rem;
+}
 body.tax-type-de-produits section.section_suBtax .section_suBtax-slider .slick-dots li {
-  width: 0.4rem;
-  height: 0.4rem;
+  min-width: 0.4rem;
+  max-width: 0.4rem;
+  min-height: 0.4rem;
+  max-height: 0.4rem;
 }
 body.tax-type-de-produits section.section_suBtax .section_suBtax-slider .slick-dots li button {
   border-width: 0.1rem;
   border-color: transparent;
-  background-color: #f1f1f1;
+  background-color: #d8d8d8;
   transition: all 0.3s cubic-bezier(0.83, 0, 0.17, 1);
 }
 body.tax-type-de-produits section.section_suBtax .section_suBtax-slider .slick-dots li.slick-active {
-  width: 0.6rem;
-  height: 0.6rem;
+  min-width: 0.6rem;
+  max-width: 0.6rem;
+  min-height: 0.6rem;
+  max-height: 0.6rem;
 }
 body.tax-type-de-produits section.section_suBtax .section_suBtax-slider .slick-dots li.slick-active button {
   background-color: #AB1A0A;
