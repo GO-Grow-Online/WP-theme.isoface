@@ -80,6 +80,9 @@ body.tax-type-de-produits {
 
                 .slick {
                     &-dots {
+                        flex-wrap: wrap;
+                        width: calc(100% - (map-get($sec-spacings, mobile-x) *2) - 4rem);
+                        margin-left: map-get($sec-spacings, mobile-x) + 2rem;
                         gap: 0.5rem;
                         li {
                             min-width: 0.4rem;
