@@ -54,8 +54,23 @@
 }) %}
 {% for tax in subTaxonomies %}
 
-{{ tax.title }}
-
+    {% set args = { 'posts_per_page' : -1 } %}
+    {% set posts = tax.get_posts(args) %}
+    
+    {% if posts %}
+        <div class="wrapper">
+            <h2>
+                <span>{{ p.title }}</span>
+                {{ tax.title }}
+            </h2>
+            
+            <div class="section_suBtax-slider">
+                {% for item in posts %}
+                {% include 'blocks/product-card.twig' %}
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
 {% endfor %}
 </section>
 {% else %}
