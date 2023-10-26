@@ -81,15 +81,17 @@ body.tax-type-de-produits {
                 .slick {
                     &-dots {
                         li {
-                            width: 0.2rem;
-                            height: 0.2rem;
-                            
+                            width: 0.4rem;
+                            height: 0.4rem;
+
                             button {
+                                border-width: 0.1rem;
                                 border-color: $inactive-color;
                             }
 
-                            &.active {
+                            &.active button {
                                 border-color: $red;
+                                border-width: 0.2rem;
                             }
                         }
                     }

@@ -3039,14 +3039,16 @@ body.tax-type-de-produits section.section_suBtax .section_suBtax-slider .card {
   margin: 0 0.875rem;
 }
 body.tax-type-de-produits section.section_suBtax .section_suBtax-slider .slick-dots li {
-  width: 0.2rem;
-  height: 0.2rem;
+  width: 0.4rem;
+  height: 0.4rem;
 }
 body.tax-type-de-produits section.section_suBtax .section_suBtax-slider .slick-dots li button {
+  border-width: 0.1rem;
   border-color: #f1f1f1;
 }
-body.tax-type-de-produits section.section_suBtax .section_suBtax-slider .slick-dots li.active {
+body.tax-type-de-produits section.section_suBtax .section_suBtax-slider .slick-dots li.active button {
   border-color: #AB1A0A;
+  border-width: 0.2rem;
 }
 body.tax-type-de-produits section.section_suBtax .section_suBtax-slider .slick-slide {
   opacity: 0;
