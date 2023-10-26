@@ -24,6 +24,7 @@ if($term != null) {
     $context['products'] = Timber::get_posts(
         array(
             'post_type' => 'produits',
+            'posts_per_page' => -1,
             'tax_query' => array(
                 array(
                     'taxonomy' => 'type-de-produits',
