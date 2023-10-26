@@ -60,4 +60,4 @@ $context['archive'] = Timber::get_posts( array(
 
 Timber::render( $templates, $context );
 
-var_dump( $context['p']['id']);
+var_dump( $context['p']['ID']);
