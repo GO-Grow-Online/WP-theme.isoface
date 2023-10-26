@@ -44,9 +44,7 @@ if ( is_day() ) {
 	$context['title'] = get_the_title();
 	$context['p'] = new Timber\Term();
 
-	$context['subTax'] = Timber::get_terms(array(
-		'parent' => $context['p']['id'],
-	));
+	
 
 	$context['projects'] = get_field('projects_rel');
 
@@ -61,3 +59,5 @@ $context['archive'] = Timber::get_posts( array(
 
 
 Timber::render( $templates, $context );
+
+var_dump( $context['p']['id']);
