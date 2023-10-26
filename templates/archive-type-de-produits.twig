@@ -46,9 +46,9 @@
 {% if p.display_links == false %}
 <section class="section_suBtax bg bg-pretty">
 
+    {{ p.slug }}
 
-{% set args = { 'taxonomy' : p.slug } %}
-{% set subTaxonomies = get_terms(args) %}
+{% set subTaxonomies = p.children %}
 {% for tax in subTaxonomies %}
 
     {% set args = { 'posts_per_page' : -1 } %}
