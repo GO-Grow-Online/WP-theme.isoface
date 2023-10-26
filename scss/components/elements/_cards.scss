@@ -7,10 +7,8 @@ $corner : $card-mobile-corner;
 
     svg {
         color: $red;
-        min-width: $icon-size-mobile;
-        min-height: $icon-size-mobile;
-        max-width: $icon-size-mobile;
-        max-height: $icon-size-mobile;
+        width: $icon-size-mobile;
+        height: $icon-size-mobile;
     }
 
     &-header {
@@ -40,6 +38,12 @@ $corner : $card-mobile-corner;
 
         p {
             margin-top: 0.5rem;
+        }
+
+        & > svg {
+            color: $red;
+            min-width: $icon-size-mobile;
+            min-height: $icon-size-mobile;
         }
     }
 
@@ -147,10 +151,8 @@ $corner : $card-desktop-corner;
     .card {
 
         svg {
-            max-width: ($icon-size-desktop * 1.2);
-            min-width: ($icon-size-desktop * 1.2);
-            max-height: ($icon-size-desktop * 1.2);
-            min-height: ($icon-size-desktop * 1.2);
+            width: ($icon-size-desktop * 1.2);
+            height: ($icon-size-desktop * 1.2);
         }
 
         &-header {
