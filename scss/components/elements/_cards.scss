@@ -188,7 +188,7 @@ $corner : $card-desktop-corner;
                         max-height: calc(100px + 10vw);
                         margin-left: -$sp;
                         margin-bottom: -$sp;
-                        clip-path: polygon(0 $corner, 28% 0, 100% 0, 100% 100%, 0% 100%);
+                        clip-path: polygon(0 $corner, $corner 0, 100% 0, 100% 100%, 0% 100%);
                     }
                 }
                 &-body {

@@ -879,7 +879,7 @@ body.lb-disable-scrolling {
     max-height: calc(100px + 10vw);
     margin-left: -1.75rem;
     margin-bottom: -1.75rem;
-    clip-path: polygon(0 5.25rem, 28% 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 5.25rem, 5.25rem 0, 100% 0, 100% 100%, 0% 100%);
   }
   .card--product-type .card-body, .card--product .card-body, .card--news .card-body {
     gap: 1.75rem;
