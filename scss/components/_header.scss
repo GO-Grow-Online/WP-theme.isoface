@@ -123,6 +123,16 @@ header {
         background-color: $white;
 
         &-cta {
+
+            @keyframes whatsapp-cta {
+                0% { transform: translateX(100%); }
+                50% { transform: translateX(0%); box-shadow: 0 0 0 0 #25d365a9; }
+                60% { transform: translateX(0%); }
+                100% { transform: translateX(0%); box-shadow: 0 0 0 1rem #25d36500; }
+            }
+
+            animation: whatsapp-cta 1s;
+
             font-weight: 900;
             text-transform: uppercase;
 
@@ -135,6 +145,9 @@ header {
             padding-left: map-get($sec-spacings, mobile-x);
             padding-right: map-get($sec-spacings, mobile-x);
             height: 4rem;
+
+            transform: translateX(0%);
+            transition: all $fast $bezier;
 
             img {
                 margin-right: 0.5rem;
