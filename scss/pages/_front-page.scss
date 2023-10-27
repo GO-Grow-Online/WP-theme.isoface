@@ -65,8 +65,8 @@ section.heading-fp {
                 order: 0;
                 padding-right: (map-get($sec-spacings, desktop-y) * 0.5);
                 padding-left: map-get($sec-spacings, desktop-x);
-                padding-top: map-get($sec-spacings, desktop-y);
-                padding-bottom: map-get($sec-spacings, desktop-y);
+                padding-top: calc(map-get($sec-spacings, desktop-y) / 2);
+                padding-bottom: calc(map-get($sec-spacings, desktop-y) / 2);
             }
 
             height: 80vh!important;
