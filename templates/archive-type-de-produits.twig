@@ -49,6 +49,7 @@
 
 {% for tax in subTaxonomies %}
 
+
     {% set args = { 'posts_per_page' : -1 } %}
     {% set posts = tax.get_posts(args) %}
 
@@ -65,7 +66,7 @@
     }
     %}
 
-    {% set posts = Timberget_posts(args) %}
+    {% set posts = fn('get_posts, args) %}
 
     {% if posts %}
         <div class="wrapper">
