@@ -68,6 +68,8 @@ section.heading-fp {
                 padding-top: map-get($sec-spacings, desktop-y);
                 padding-bottom: map-get($sec-spacings, desktop-y);
             }
+
+            height: 90vh!important;
             
             &-slider {
                 height: 100%;
@@ -87,7 +89,7 @@ section.heading-fp {
 
                 .slide-img {
                     max-height: none;
-                    height: calc(50px + 52vw) !important;
+                    height: 90vh!important;
                 }
 
                 .btn-lg {

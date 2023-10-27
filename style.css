@@ -2774,6 +2774,9 @@ section.heading-fp .heading-fp-slider .slick-dots {
   section.heading-fp > .wrapper > div {
     width: 50vw;
   }
+  section.heading-fp .heading-fp {
+    height: 90vh !important;
+  }
   section.heading-fp .heading-fp-text {
     order: 0;
     padding-right: 4rem;
@@ -2795,7 +2798,7 @@ section.heading-fp .heading-fp-slider .slick-dots {
   }
   section.heading-fp .heading-fp-slider .slide-img {
     max-height: none;
-    height: calc(50px + 52vw) !important;
+    height: 90vh !important;
   }
   section.heading-fp .heading-fp-slider .btn-lg {
     position: absolute;
