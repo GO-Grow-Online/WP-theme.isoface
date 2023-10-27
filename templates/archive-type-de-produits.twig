@@ -52,13 +52,10 @@
 }) %}
 {% for tax in subTaxonomies %}
 
-    {{ tax.name }}
-    {{ tax.title }}
-
     {% set args = { 'posts_per_page' : -1 } %}
     {% set posts = tax.get_posts(args) %}
 
-    {# set args = {
+    {% set args = {
         'posts_per_page': -1,
         'post_type': 'produits',
         'tax_query':
@@ -69,7 +66,7 @@
                 'terms': tax.slug
             }
         }
-    #}
+    %}
 
 
     {# set posts = fn('get_posts', args) #}
@@ -78,7 +75,7 @@
         <div class="wrapper">
             <h2>
                 <span>{{ p.title }}</span>
-                {{ tax.title }}
+                {{ tax.name }}
             </h2>
             
             <div class="section_suBtax-slider">
