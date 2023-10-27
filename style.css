@@ -2794,7 +2794,8 @@ section.heading-fp .heading-fp-slider .slick-dots {
     left: 1.75rem;
   }
   section.heading-fp .heading-fp-slider .slide-img {
-    max-height: calc(100% + 8rem);
+    max-height: none;
+    height: calc(280px + 50vw) !important;
   }
   section.heading-fp .heading-fp-slider .btn-lg {
     position: absolute;
