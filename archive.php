@@ -46,12 +46,6 @@ if ( is_day() ) {
 
 	$context['projects'] = get_field('projects_rel');
 
-
-	$context['subTaxonomies'] = Timber::get_terms(array(
-		'taxonomy' => 'type-de-produits',
-		'parent' => get_the_ID()
-	));
-
 	$templates = array( 'archive-type-de-produits.twig' );
 }
 
