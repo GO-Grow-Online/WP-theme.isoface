@@ -68,7 +68,7 @@
     }
     %}
 
-    {% set posts = fn('get_posts', args) %}
+    {% set posts = Timber.get_posts(args) %}
 
     {% if posts %}
         <div class="wrapper">
@@ -79,6 +79,7 @@
             
             <div class="section_suBtax-slider">
                 {% for item in posts %}
+
                 {% include 'blocks/product-card.twig' with { 'item': item } %}
                 {% endfor %}
             </div>
