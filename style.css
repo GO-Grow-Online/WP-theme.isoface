@@ -163,7 +163,7 @@ header .nav-bottom {
   background-color: #fff;
 }
 header .nav-bottom-cta {
-  animation: whatsapp-cta 1s;
+  animation: whatsapp-cta 3s;
   font-weight: 900;
   text-transform: uppercase;
   display: flex;
@@ -180,16 +180,16 @@ header .nav-bottom-cta {
   0% {
     transform: translateX(100%);
   }
-  50% {
+  20% {
     transform: translateX(0%);
     box-shadow: 0 0 0 0 rgba(37, 211, 101, 0.662745098);
   }
-  60% {
+  30% {
     transform: translateX(0%);
   }
   100% {
     transform: translateX(0%);
-    box-shadow: 0 0 0 1rem rgba(37, 211, 101, 0);
+    box-shadow: 0 0 0 2rem rgba(37, 211, 101, 0);
   }
 }
 header .nav-bottom-cta img {
