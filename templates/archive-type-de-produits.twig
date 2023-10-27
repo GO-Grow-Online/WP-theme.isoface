@@ -68,7 +68,7 @@
     }
     %}
 
-    {% set posts = Timber::get_posts(args) %}
+    {% set posts = fn('get_posts', args) %}
 
     {% if posts %}
         <div class="wrapper">
