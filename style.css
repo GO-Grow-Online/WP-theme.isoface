@@ -2782,7 +2782,7 @@ section.heading-fp .heading-fp-slider .slick-dots {
     padding-bottom: 8rem;
   }
   section.heading-fp .heading-fp-slider {
-    height: auto;
+    height: 100%;
     order: 1;
   }
   section.heading-fp .heading-fp-slider .slick-slide {
