@@ -86,7 +86,7 @@ section.heading-fp {
                 }
 
                 .slide-img {
-                    max-height: 100%;
+                    max-height: calc(100% + map-get($sec-spacings, desktop-y));
                 }
 
                 .btn-lg {
