@@ -71,16 +71,7 @@
     %}
 
 
-    {% set posts = fn('get_posts', args) %}
-
-
-
-    {% set timberPosts = [] %}
-
-    {% for post in posts %}
-        {% set timberPost = Timber\Post(post.ID) %}
-        {% set timberPosts = timberPosts|merge([timberPost]) %}
-    {% endfor %}
+    {% set posts = Timber::get_posts(args) %}
 
     {% if posts %}
         <div class="wrapper">
@@ -90,9 +81,8 @@
             </h2>
             
             <div class="section_suBtax-slider">
-                
-                {% for timberPost in timberPosts %}
-                    {% include 'blocks/product-card.twig' with { 'item': timberPost } %}
+                {% for item in posts %}
+                {% include 'blocks/product-card.twig' %}
                 {% endfor %}
             </div>
         </div>
