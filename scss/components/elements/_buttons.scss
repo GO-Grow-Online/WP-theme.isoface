@@ -155,8 +155,11 @@
             .btn-lg {
                 &-icon {
                     border-right: 1px solid $white;
+                    &:after {
+                        left: inherit;
+                        right: 0;
+                    }
                 }
-
             }
             
             &:hover{

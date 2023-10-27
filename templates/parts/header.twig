@@ -39,5 +39,15 @@
 			</a>
 			{% endif %}
 		</div>
+
+		{% if g.bottom_nav_link.title %}
+		<a class="nav-bottom-cta" href="{{ g.bottom_nav_link.url }}">
+			{% if g.bottom_nav_link_icon %}
+			<img class="icon" src="{{ g.bottom_nav_link_icon.url }}" alt="Icône du bouton '{{ g.bottom_nav_link.title }}'">
+			{% endif %}
+
+			{{ g.bottom_nav_link.title }}
+		</a>
+		{% endif %}
 	</div>
 </header>

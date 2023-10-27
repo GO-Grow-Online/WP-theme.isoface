@@ -167,7 +167,8 @@ header .nav-bottom-cta {
   text-transform: uppercase;
   display: flex;
   align-items: center;
-  color: #AB1A0A;
+  color: #fff;
+  background-color: #25d366;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   height: 4rem;
@@ -201,6 +202,9 @@ header .btn-menu svg.close {
 }
 header .btn-menu svg, header .btn-menu path {
   stroke: #fff !important;
+}
+header > .wrapper > .nav-bottom-cta {
+  display: none;
 }
 
 main, footer {
@@ -258,6 +262,14 @@ body.scrolled .logo {
     height: 100%;
     justify-content: space-between !important;
     padding: 0 12vw !important;
+  }
+  header > .wrapper > .nav-bottom-cta {
+    display: flex;
+  }
+  header .nav-bottom-cta {
+    position: fixed;
+    right: 0;
+    bottom: 0;
   }
   header .logo {
     position: relative;
@@ -1070,6 +1082,10 @@ body.lb-disable-scrolling {
 }
 .btn-lg--reverse .btn-lg-icon {
   border-right: 1px solid #fff;
+}
+.btn-lg--reverse .btn-lg-icon:after {
+  left: inherit;
+  right: 0;
 }
 .btn-lg--reverse:hover .btn-lg-icon {
   border-right: 1px solid #f1f1f1;
