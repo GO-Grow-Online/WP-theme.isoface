@@ -46,11 +46,14 @@
 {% if p.display_links == false %}
 <section class="section_suBtax bg bg-pretty">
 
-{# set subTaxonomies = fn('get_terms', {
+{% set subTaxonomies = fn('get_terms', {
     'taxonomy': 'type-de-produits',
     'parent': p.id
-}) #}
-{% for tax in p.children %}
+}) %}
+{% for tax in subTaxonomies %}
+
+    {{ tax.name }}
+    {{ tax.title }}
 
     {% set args = { 'posts_per_page' : -1 } %}
     {% set posts = tax.get_posts(args) %}
