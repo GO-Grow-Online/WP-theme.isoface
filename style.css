@@ -2455,6 +2455,7 @@ section.section_video.video--open .section_video-media, footer.section_video.vid
     padding-bottom: 0;
   }
   section.section_projects .section_projects-img, footer.section_projects .section_projects-img {
+    min-width: calc(100px + 30vw);
     width: calc(100px + 30vw);
     height: calc(100px + 30vw);
   }
@@ -2467,7 +2468,6 @@ section.section_video.video--open .section_video-media, footer.section_video.vid
     width: calc(100px + 30vw) !important;
   }
   section.section_projects > .wrapper .projects_slider-item-img, footer.section_projects > .wrapper .projects_slider-item-img {
-    min-width: calc(100px + 30vw);
     width: calc(100px + 30vw);
     height: calc(100px + 30vw);
   }
