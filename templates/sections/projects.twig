@@ -8,13 +8,13 @@
         </div>
 
         {% if not p.projects_has_rel %}
-        <div class="section_projects-slider">
-            {% include 'blocks/projects-slider.twig' %}
-        </div>
-        {% else %}
         <div class="section_projects-img">
             {% set img = p.meta('projects_img') %}
             {% include 'blocks/image.twig' %}
+        </div>
+        {% else %}
+        <div class="section_projects-slider">
+            {% include 'blocks/projects-slider.twig' %}
         </div>
         {% endif %}
     </div>
