@@ -197,6 +197,10 @@ header .nav-bottom-cta img {
   height: 1.2rem;
   width: 1.2rem;
 }
+header .nav-bottom-cta:hover {
+  background-color: #242424;
+  color: #25d366;
+}
 header .btn-menu {
   position: relative;
   width: 4rem;

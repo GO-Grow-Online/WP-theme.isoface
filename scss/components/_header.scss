@@ -154,6 +154,11 @@ header {
                 height: 1.2rem;
                 width: 1.2rem;
             }
+
+            &:hover {
+                background-color: $text-color;
+                color: $whatsapp;
+            }
         }
     }
 
