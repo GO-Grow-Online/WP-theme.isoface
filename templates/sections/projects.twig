@@ -7,7 +7,7 @@
             {% include 'blocks/content-block.twig' %}
         </div>
 
-        {% if p.projects_has_rel %}
+        {% if not p.projects_has_rel %}
         <div class="section_projects-slider">
             {% include 'blocks/projects-slider.twig' %}
         </div>
