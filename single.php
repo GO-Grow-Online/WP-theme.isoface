@@ -14,11 +14,21 @@ $timber_post     = Timber::get_post();
 $context['p'] = $timber_post;
 
 if (get_post_type() == 'produits') {
+
+	$terms = wp_get_post_terms($timber_post->ID, 'type-de-produits', array('fields' => 'ids'));
+
 	$context['other_products'] = Timber::get_posts( array(
 		'post_type' => 'produits',
 		'posts_per_page' => 3,
 		'post__not_in'   => array(get_the_ID()),
 		'orderby'        => 'rand',
+		'tax_query' => array(
+            array(
+                'taxonomy' => 'type-de-produits',
+                'field' => 'id',
+                'terms' => $terms,
+            ),
+        ),
 	) );
 }
 
