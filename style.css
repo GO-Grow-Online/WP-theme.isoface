@@ -1907,6 +1907,7 @@ section.section_projects .section_projects-text, footer.section_projects .sectio
   padding-bottom: 4rem;
 }
 section.section_projects .section_projects-img, footer.section_projects .section_projects-img {
+  width: 50%;
   margin-top: 4rem;
   filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.1568627451));
 }
