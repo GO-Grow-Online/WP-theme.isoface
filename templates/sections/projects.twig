@@ -7,7 +7,7 @@
             {% include 'blocks/content-block.twig' %}
         </div>
 
-        {% set has_no_projects = p.projects_has_rel is empty ? false : true %}
+        {% set has_no_projects = p.projects_has_rel is empty ? false : p.projects_has_rel %}
         {% if has_no_projects %}
         <div class="section_projects-img">
             {% set img = p.meta('projects_img') %}
