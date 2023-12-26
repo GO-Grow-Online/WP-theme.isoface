@@ -1997,6 +1997,9 @@ section.section_content .section_content-media, footer.section_content .section_
   position: relative;
   overflow: hidden;
 }
+section.section_content .section_content-media--contain img, footer.section_content .section_content-media--contain img {
+  object-fit: contain !important;
+}
 section.section_content .section_content-media-img, footer.section_content .section_content-media-img {
   position: relative;
   display: flex;
@@ -2248,9 +2251,6 @@ section.section_video.video--open .section_video-media, footer.section_video.vid
   section.section_content .section_content-media, footer.section_content .section_content-media {
     position: relative;
     align-self: stretch;
-  }
-  section.section_content .section_content-media--contain img, footer.section_content .section_content-media--contain img {
-    object-fit: contain !important;
   }
   section.section_content .section_content-media .btn-lg, footer.section_content .section_content-media .btn-lg {
     position: absolute;
