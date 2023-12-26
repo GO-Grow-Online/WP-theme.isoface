@@ -2249,6 +2249,9 @@ section.section_video.video--open .section_video-media, footer.section_video.vid
     position: relative;
     align-self: stretch;
   }
+  section.section_content .section_content-media--contain img, footer.section_content .section_content-media--contain img {
+    object-fit: contain !important;
+  }
   section.section_content .section_content-media .btn-lg, footer.section_content .section_content-media .btn-lg {
     position: absolute;
     bottom: 0;

@@ -10,7 +10,9 @@
             {% set block = product.meta('itr_content') %}
             {% include 'blocks/content-block.twig' %}
         </div>
-        <div class="section_content-media">
+
+        {% set contain = p.contain_img ? " section_content-media--contain" : "" %}
+        <div class="section_content-media{{ contain }}">
             {% set img = product.meta('img') %}
 
             <div class="section_content-media-img img_gradient {% if switch %} img_gradient-left{% else %} img_gradient-right{% endif %}">

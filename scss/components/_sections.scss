@@ -515,6 +515,12 @@ section, footer {
                     // height: 100%;
                     align-self: stretch;
 
+                    &--contain {
+                        img {
+                            object-fit: contain!important;
+                        }
+                    }
+
                     .btn-lg {
                         position: absolute;
                         bottom: 0;
