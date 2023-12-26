@@ -15,32 +15,32 @@ section, footer {
             &-text {
                 padding-bottom: map-get($sec-spacings, mobile-y );
             }
-        }
-
-        &-img {
-            margin-top: map-get($sec-spacings, mobile-y );
-            filter: drop-shadow(0 20px 50px #00000028);
             
-            img {
-                max-height: calc(200px + 20vw);
-                clip-path: polygon(0 $card-mobile-corner, $card-mobile-corner 0, 100% 0, 100% 100%, 0% 100%);
-            }
-
-            &::after {
-                content: "";
-                top: $sp;
-                left: $sp;
-                width: calc(100% - ($sp * 2) - 1px);
-                height: calc(100% - ($sp * 2) - 1px);
-                border-top-left-radius: $sp * $corner-radius-multiplier;
-                border-radius: none;
-                border: $sp solid $red;
-                border-bottom: none;
-
-                position: absolute;
-                z-index: -1;
-                top: 0;
-                left: 0;
+            &-img {
+                margin-top: map-get($sec-spacings, mobile-y );
+                filter: drop-shadow(0 20px 50px #00000028);
+                
+                img {
+                    max-height: calc(200px + 20vw);
+                    clip-path: polygon(0 $card-mobile-corner, $card-mobile-corner 0, 100% 0, 100% 100%, 0% 100%);
+                }
+    
+                &::after {
+                    content: "";
+                    top: $sp;
+                    left: $sp;
+                    width: calc(100% - ($sp * 2) - 1px);
+                    height: calc(100% - ($sp * 2) - 1px);
+                    border-top-left-radius: $sp * $corner-radius-multiplier;
+                    border-radius: none;
+                    border: $sp solid $red;
+                    border-bottom: none;
+    
+                    position: absolute;
+                    z-index: -1;
+                    top: 0;
+                    left: 0;
+                }
             }
         }
 
