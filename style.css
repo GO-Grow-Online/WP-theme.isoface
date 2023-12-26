@@ -1997,6 +1997,9 @@ section.section_content .section_content-media, footer.section_content .section_
   position: relative;
   overflow: hidden;
 }
+section.section_content .section_content-media--contain, footer.section_content .section_content-media--contain {
+  background-color: #f1f1f1;
+}
 section.section_content .section_content-media--contain img, footer.section_content .section_content-media--contain img {
   object-fit: contain !important;
 }

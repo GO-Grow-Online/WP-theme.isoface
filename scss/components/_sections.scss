@@ -147,6 +147,7 @@ section, footer {
                 overflow: hidden;
 
                 &--contain {
+                    background-color: $inactive-color;
                     img {
                         object-fit: contain!important;
                     }
