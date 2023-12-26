@@ -2456,6 +2456,7 @@ section.section_video.video--open .section_video-media, footer.section_video.vid
   }
   section.section_projects .section_projects-img, footer.section_projects .section_projects-img {
     margin-top: 0;
+    min-width: calc(100px + 30vw);
     width: calc(100px + 30vw);
     height: calc(100px + 30vw);
   }

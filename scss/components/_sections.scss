@@ -812,6 +812,7 @@ section, footer {
                     $sp : $card-desktop-spacing;
                     margin-top: 0;
 
+                    min-width: calc(100px + 30vw);
                     width: calc(100px + 30vw);
                     height: calc(100px + 30vw);
 
