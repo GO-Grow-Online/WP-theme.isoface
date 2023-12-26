@@ -2459,6 +2459,10 @@ section.section_video.video--open .section_video-media, footer.section_video.vid
     width: calc(100px + 30vw);
     height: calc(100px + 30vw);
   }
+  section.section_projects .section_projects-img img, footer.section_projects .section_projects-img img {
+    width: 100%;
+    height: 100%;
+  }
   section.section_projects > .wrapper, footer.section_projects > .wrapper {
     display: flex;
     align-items: center;
