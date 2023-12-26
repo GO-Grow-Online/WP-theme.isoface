@@ -11,7 +11,7 @@
             {% include 'blocks/content-block.twig' %}
         </div>
 
-        {% set contain = p.contain_img ? " section_content-media--contain" : "" %}
+        {% set contain = p.contain_img == true ? " section_content-media--contain" : "" %}
         <div class="section_content-media{{ contain }}">
             {% set img = product.meta('img') %}
 

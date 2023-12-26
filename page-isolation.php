@@ -39,5 +39,3 @@ if($term != null) {
 
 
 Timber::render( 'page-isolation.twig' , $context );
-
-var_dump($term);
