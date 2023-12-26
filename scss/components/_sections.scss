@@ -825,6 +825,7 @@ section, footer {
 
                     &-item {
                         &-img {
+                            min-width: calc(100px + 30vw);
                             width: calc(100px + 30vw);
                             height: calc(100px + 30vw);
                         }
