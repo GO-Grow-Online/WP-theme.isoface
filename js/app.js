@@ -149,6 +149,11 @@ jQuery(function($) {
     }
     
     function open_stuff() {
+
+      $('.js--preventDefault').on('click', function(event) {
+        event.preventDefault();
+      })
+
       $('.js--open').on('click', function() {
         $('body').addClass($(this).attr('data-open') + "--open");
       })
