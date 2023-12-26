@@ -17,7 +17,6 @@ section, footer {
             }
             
             &-img {
-                width: 50%;
                 margin-top: map-get($sec-spacings, mobile-y );
                 filter: drop-shadow(0 20px 50px #00000028);
                 
@@ -807,6 +806,11 @@ section, footer {
                 &-text {
                     padding-right: map-get($sec-spacings, desktop-y);
                     padding-bottom: 0;
+                }
+
+                &-img {
+                    width: calc(100px + 30vw);
+                    height: calc(100px + 30vw);
                 }
             }
 

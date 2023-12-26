@@ -1907,7 +1907,6 @@ section.section_projects .section_projects-text, footer.section_projects .sectio
   padding-bottom: 4rem;
 }
 section.section_projects .section_projects-img, footer.section_projects .section_projects-img {
-  width: 50%;
   margin-top: 4rem;
   filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.1568627451));
 }
@@ -2454,6 +2453,10 @@ section.section_video.video--open .section_video-media, footer.section_video.vid
   section.section_projects .section_projects-text, footer.section_projects .section_projects-text {
     padding-right: 8rem;
     padding-bottom: 0;
+  }
+  section.section_projects .section_projects-img, footer.section_projects .section_projects-img {
+    width: calc(100px + 30vw);
+    height: calc(100px + 30vw);
   }
   section.section_projects > .wrapper, footer.section_projects > .wrapper {
     display: flex;
