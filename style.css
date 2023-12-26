@@ -2455,13 +2455,33 @@ section.section_video.video--open .section_video-media, footer.section_video.vid
     padding-bottom: 0;
   }
   section.section_projects .section_projects-img, footer.section_projects .section_projects-img {
-    min-width: calc(100px + 30vw);
+    margin-top: 0;
     width: calc(100px + 30vw);
     height: calc(100px + 30vw);
   }
+  section.section_projects .section_projects-img::after, footer.section_projects .section_projects-img::after {
+    content: "";
+    top: 0.5px;
+    left: 0;
+    width: calc(100% - 3.5rem - 1px);
+    height: calc(100% - 3.5rem - 1px);
+    border-top-left-radius: 7.875rem;
+    border: 1.75rem solid #AB1A0A;
+  }
+  section.section_projects .section_projects-img::before, footer.section_projects .section_projects-img::before {
+    content: "";
+    position: absolute;
+    z-index: -5;
+    top: 1.75rem;
+    left: 1.75rem;
+    width: calc(100% - 1.75rem);
+    height: calc(100% - 1.75rem);
+    border-right: 1.75rem solid #AB1A0A;
+    border-bottom: 1.75rem solid #AB1A0A;
+  }
   section.section_projects .section_projects-img img, footer.section_projects .section_projects-img img {
-    width: 100%;
-    height: 100%;
+    max-height: inherit;
+    clip-path: polygon(0 12rem, 12rem 0, 100% 0, 100% 100%, 0% 100%);
   }
   section.section_projects > .wrapper, footer.section_projects > .wrapper {
     display: flex;
