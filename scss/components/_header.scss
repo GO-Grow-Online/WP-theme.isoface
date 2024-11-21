@@ -144,7 +144,7 @@ header {
 
             padding-left: map-get($sec-spacings, mobile-x);
             padding-right: map-get($sec-spacings, mobile-x);
-            height: 4rem;
+            height: 4rem; 
 
             transform: translateX(0%);
             transition: all $fast $bezier;
